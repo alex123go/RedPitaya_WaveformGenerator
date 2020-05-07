@@ -1,0 +1,1421 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue May  5 18:14:56 2020
+# Process ID: 19760
+# Current directory: D:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.runs/design_1_axi_datamover_0_0_synth_1
+# Command line: vivado.exe -log design_1_axi_datamover_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_datamover_0_0.tcl
+# Log file: D:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.runs/design_1_axi_datamover_0_0_synth_1/design_1_axi_datamover_0_0.vds
+# Journal file: D:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.runs/design_1_axi_datamover_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_axi_datamover_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/Red_Pitaya/Acq_Card/ip_repo/oscilloscope_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2207] Repository 'd:/Red_Pitaya/Acq_Card/ip_repo/oscilloscope_1.0' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/Red_Pitaya/Acq_Card/ip_repo/oscilloscope_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/Synology/SynologyDrive/RedPitaya/IP/Data_throughput_DDR_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Synology/SynologyDrive/RedPitaya/DataMover_throughput/ip_repo/DataReader_through_RAM_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programs/Vivado/2019.1/data/ip'.
+Command: synth_design -top design_1_axi_datamover_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 19140 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 715.086 ; gain = 176.480
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_datamover_0_0' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/synth/design_1_axi_datamover_0_0.vhd:97]
+	Parameter C_INCLUDE_MM2S bound to: 1 - type: integer 
+	Parameter C_M_AXI_MM2S_ARID bound to: 0 - type: integer 
+	Parameter C_M_AXI_MM2S_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXI_MM2S_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_MM2S_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXIS_MM2S_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_INCLUDE_MM2S_STSFIFO bound to: 1 - type: integer 
+	Parameter C_MM2S_STSCMD_FIFO_DEPTH bound to: 4 - type: integer 
+	Parameter C_MM2S_STSCMD_IS_ASYNC bound to: 0 - type: integer 
+	Parameter C_INCLUDE_MM2S_DRE bound to: 0 - type: integer 
+	Parameter C_MM2S_BURST_SIZE bound to: 256 - type: integer 
+	Parameter C_MM2S_BTT_USED bound to: 23 - type: integer 
+	Parameter C_MM2S_ADDR_PIPE_DEPTH bound to: 3 - type: integer 
+	Parameter C_INCLUDE_S2MM bound to: 0 - type: integer 
+	Parameter C_M_AXI_S2MM_AWID bound to: 1 - type: integer 
+	Parameter C_M_AXI_S2MM_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXI_S2MM_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_S2MM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXIS_S2MM_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_INCLUDE_S2MM_STSFIFO bound to: 0 - type: integer 
+	Parameter C_S2MM_STSCMD_FIFO_DEPTH bound to: 4 - type: integer 
+	Parameter C_S2MM_STSCMD_IS_ASYNC bound to: 0 - type: integer 
+	Parameter C_INCLUDE_S2MM_DRE bound to: 0 - type: integer 
+	Parameter C_S2MM_BURST_SIZE bound to: 64 - type: integer 
+	Parameter C_S2MM_BTT_USED bound to: 16 - type: integer 
+	Parameter C_S2MM_SUPPORT_INDET_BTT bound to: 0 - type: integer 
+	Parameter C_S2MM_ADDR_PIPE_DEPTH bound to: 3 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_MM2S_INCLUDE_SF bound to: 1 - type: integer 
+	Parameter C_S2MM_INCLUDE_SF bound to: 0 - type: integer 
+	Parameter C_ENABLE_CACHE_USER bound to: 0 - type: integer 
+	Parameter C_ENABLE_MM2S_TKEEP bound to: 1 - type: integer 
+	Parameter C_ENABLE_S2MM_TKEEP bound to: 1 - type: integer 
+	Parameter C_ENABLE_SKID_BUF bound to: 11111 - type: string 
+	Parameter C_ENABLE_S2MM_ADV_SIG bound to: 0 - type: integer 
+	Parameter C_ENABLE_MM2S_ADV_SIG bound to: 0 - type: integer 
+	Parameter C_CMD_WIDTH bound to: 72 - type: integer 
+INFO: [Synth 8-3491] module 'axi_datamover' declared at 'd:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:54991' bound to instance 'U0' of component 'axi_datamover' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/synth/design_1_axi_datamover_0_0.vhd:280]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:55436]
+	Parameter C_INCLUDE_MM2S bound to: 1 - type: integer 
+	Parameter C_M_AXI_MM2S_ARID bound to: 0 - type: integer 
+	Parameter C_M_AXI_MM2S_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXI_MM2S_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_MM2S_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXIS_MM2S_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_INCLUDE_MM2S_STSFIFO bound to: 1 - type: integer 
+	Parameter C_MM2S_STSCMD_FIFO_DEPTH bound to: 4 - type: integer 
+	Parameter C_MM2S_STSCMD_IS_ASYNC bound to: 0 - type: integer 
+	Parameter C_INCLUDE_MM2S_DRE bound to: 0 - type: integer 
+	Parameter C_MM2S_BURST_SIZE bound to: 256 - type: integer 
+	Parameter C_MM2S_BTT_USED bound to: 23 - type: integer 
+	Parameter C_MM2S_ADDR_PIPE_DEPTH bound to: 3 - type: integer 
+	Parameter C_MM2S_INCLUDE_SF bound to: 1 - type: integer 
+	Parameter C_INCLUDE_S2MM bound to: 0 - type: integer 
+	Parameter C_M_AXI_S2MM_AWID bound to: 1 - type: integer 
+	Parameter C_M_AXI_S2MM_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXI_S2MM_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_S2MM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXIS_S2MM_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_INCLUDE_S2MM_STSFIFO bound to: 0 - type: integer 
+	Parameter C_S2MM_STSCMD_FIFO_DEPTH bound to: 4 - type: integer 
+	Parameter C_S2MM_STSCMD_IS_ASYNC bound to: 0 - type: integer 
+	Parameter C_INCLUDE_S2MM_DRE bound to: 0 - type: integer 
+	Parameter C_S2MM_BURST_SIZE bound to: 64 - type: integer 
+	Parameter C_S2MM_BTT_USED bound to: 16 - type: integer 
+	Parameter C_S2MM_SUPPORT_INDET_BTT bound to: 0 - type: integer 
+	Parameter C_S2MM_ADDR_PIPE_DEPTH bound to: 3 - type: integer 
+	Parameter C_S2MM_INCLUDE_SF bound to: 0 - type: integer 
+	Parameter C_ENABLE_CACHE_USER bound to: 0 - type: integer 
+	Parameter C_ENABLE_SKID_BUF bound to: 11111 - type: string 
+	Parameter C_ENABLE_MM2S_TKEEP bound to: 1 - type: integer 
+	Parameter C_ENABLE_S2MM_TKEEP bound to: 1 - type: integer 
+	Parameter C_ENABLE_S2MM_ADV_SIG bound to: 0 - type: integer 
+	Parameter C_ENABLE_MM2S_ADV_SIG bound to: 0 - type: integer 
+	Parameter C_MICRO_DMA bound to: 0 - type: integer 
+	Parameter C_CMD_WIDTH bound to: 72 - type: integer 
+	Parameter C_MCDMA bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_mm2s_full_wrap' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:53572]
+	Parameter C_INCLUDE_MM2S bound to: 1 - type: integer 
+	Parameter C_MM2S_ARID bound to: 0 - type: integer 
+	Parameter C_MM2S_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MM2S_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_MM2S_MDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_MM2S_SDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_INCLUDE_MM2S_STSFIFO bound to: 1 - type: integer 
+	Parameter C_MM2S_STSCMD_FIFO_DEPTH bound to: 4 - type: integer 
+	Parameter C_MM2S_STSCMD_IS_ASYNC bound to: 0 - type: integer 
+	Parameter C_INCLUDE_MM2S_DRE bound to: 0 - type: integer 
+	Parameter C_MM2S_BURST_SIZE bound to: 256 - type: integer 
+	Parameter C_MM2S_BTT_USED bound to: 23 - type: integer 
+	Parameter C_MM2S_ADDR_PIPE_DEPTH bound to: 3 - type: integer 
+	Parameter C_TAG_WIDTH bound to: 4 - type: integer 
+	Parameter C_INCLUDE_MM2S_GP_SF bound to: 1 - type: integer 
+	Parameter C_ENABLE_CACHE_USER bound to: 0 - type: integer 
+	Parameter C_ENABLE_MM2S_TKEEP bound to: 1 - type: integer 
+	Parameter C_ENABLE_SKID_BUF bound to: 11111 - type: string 
+	Parameter C_MCDMA bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_reset' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
+	Parameter C_STSCMD_IS_ASYNC bound to: 0 - type: integer 
+INFO: [Synth 8-4471] merging register 'sig_cmd_stat_rst_int_reg_n_reg' into 'sig_cmd_stat_rst_user_reg_n_cdc_from_reg' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:191]
+INFO: [Synth 8-4471] merging register 'sig_mmap_rst_reg_n_reg' into 'sig_cmd_stat_rst_user_reg_n_cdc_from_reg' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:194]
+INFO: [Synth 8-4471] merging register 'sig_stream_rst_reg_n_reg' into 'sig_cmd_stat_rst_user_reg_n_cdc_from_reg' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:197]
+WARNING: [Synth 8-6014] Unused sequential element sig_cmd_stat_rst_int_reg_n_reg was removed.  [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:191]
+WARNING: [Synth 8-6014] Unused sequential element sig_mmap_rst_reg_n_reg was removed.  [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:194]
+WARNING: [Synth 8-6014] Unused sequential element sig_stream_rst_reg_n_reg was removed.  [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_reset' (1#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_cmd_status' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
+	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_INCLUDE_STSFIFO bound to: 1 - type: integer 
+	Parameter C_STSCMD_FIFO_DEPTH bound to: 4 - type: integer 
+	Parameter C_STSCMD_IS_ASYNC bound to: 0 - type: integer 
+	Parameter C_CMD_WIDTH bound to: 68 - type: integer 
+	Parameter C_STS_WIDTH bound to: 8 - type: integer 
+	Parameter C_ENABLE_CACHE_USER bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+	Parameter C_DWIDTH bound to: 68 - type: integer 
+	Parameter C_DEPTH bound to: 4 - type: integer 
+	Parameter C_IS_ASYNC bound to: 0 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 2 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+	Parameter C_DWIDTH bound to: 68 - type: integer 
+	Parameter C_DEPTH bound to: 4 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+	Parameter C_DWIDTH bound to: 68 - type: integer 
+	Parameter C_DEPTH bound to: 4 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+	Parameter C_SIZE bound to: 3 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f' (2#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+	Parameter C_DEPTH bound to: 4 - type: integer 
+	Parameter C_DWIDTH bound to: 68 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f' (3#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f' (4#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f' (5#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo' (6#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized0' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+	Parameter C_DWIDTH bound to: 8 - type: integer 
+	Parameter C_DEPTH bound to: 4 - type: integer 
+	Parameter C_IS_ASYNC bound to: 0 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 2 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized0' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+	Parameter C_DWIDTH bound to: 8 - type: integer 
+	Parameter C_DEPTH bound to: 4 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized0' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+	Parameter C_DWIDTH bound to: 8 - type: integer 
+	Parameter C_DEPTH bound to: 4 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized0' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+	Parameter C_DEPTH bound to: 4 - type: integer 
+	Parameter C_DWIDTH bound to: 8 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized0' (6#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized0' (6#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized0' (6#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized0' (6#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_cmd_status' (7#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rd_status_cntl' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:13746]
+	Parameter C_STS_WIDTH bound to: 8 - type: integer 
+	Parameter C_TAG_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rd_status_cntl' (8#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:13746]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_pcc' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:7416]
+	Parameter C_IS_MM2S bound to: 1 - type: integer 
+	Parameter C_DRE_ALIGN_WIDTH bound to: 1 - type: integer 
+	Parameter C_SEL_ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_STREAM_DWIDTH bound to: 16 - type: integer 
+	Parameter C_MAX_BURST_LEN bound to: 256 - type: integer 
+	Parameter C_CMD_WIDTH bound to: 68 - type: integer 
+	Parameter C_TAG_WIDTH bound to: 4 - type: integer 
+	Parameter C_BTT_USED bound to: 23 - type: integer 
+	Parameter C_SUPPORT_INDET_BTT bound to: 0 - type: integer 
+	Parameter C_NATIVE_XFER_WIDTH bound to: 64 - type: integer 
+	Parameter C_STRT_SF_OFFSET_WIDTH bound to: 2 - type: integer 
+	Parameter C_MCDMA bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+	Parameter C_OP_MODE bound to: 0 - type: integer 
+	Parameter C_STRB_WIDTH bound to: 8 - type: integer 
+	Parameter C_OFFSET_WIDTH bound to: 3 - type: integer 
+	Parameter C_NUM_BYTES_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2' (9#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2__parameterized0' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+	Parameter C_OP_MODE bound to: 1 - type: integer 
+	Parameter C_STRB_WIDTH bound to: 8 - type: integer 
+	Parameter C_OFFSET_WIDTH bound to: 3 - type: integer 
+	Parameter C_NUM_BYTES_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2__parameterized0' (9#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-226] default block is never used [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:9490]
+WARNING: [Synth 8-6014] Unused sequential element sig_input_reg_full_reg was removed.  [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:8048]
+WARNING: [Synth 8-6014] Unused sequential element sig_xfer_reg_full_reg was removed.  [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:8359]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_pcc' (10#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:7416]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+	Parameter C_ADDR_FIFO_DEPTH bound to: 3 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_ADDR_ID bound to: 0 - type: integer 
+	Parameter C_ADDR_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_TAG_WIDTH bound to: 4 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-5534] Detected attribute (* keep = "TRUE" *) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:10077]
+INFO: [Synth 8-5534] Detected attribute (* keep = "TRUE" *) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:10083]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized1' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+	Parameter C_DWIDTH bound to: 59 - type: integer 
+	Parameter C_DEPTH bound to: 3 - type: integer 
+	Parameter C_IS_ASYNC bound to: 0 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 2 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized1' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+	Parameter C_DWIDTH bound to: 59 - type: integer 
+	Parameter C_DEPTH bound to: 3 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized1' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+	Parameter C_DWIDTH bound to: 59 - type: integer 
+	Parameter C_DEPTH bound to: 3 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized1' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+	Parameter C_DEPTH bound to: 3 - type: integer 
+	Parameter C_DWIDTH bound to: 59 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized1' (10#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized1' (10#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized1' (10#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized1' (10#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_tag_reg_reg was removed.  [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:10410]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_cmd_cmplt_reg_reg was removed.  [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:10417]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl' (11#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rddata_cntl' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:12185]
+	Parameter C_INCLUDE_DRE bound to: 0 - type: integer 
+	Parameter C_ALIGN_WIDTH bound to: 1 - type: integer 
+	Parameter C_SEL_ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter C_DATA_CNTL_FIFO_DEPTH bound to: 3 - type: integer 
+	Parameter C_MMAP_DWIDTH bound to: 64 - type: integer 
+	Parameter C_STREAM_DWIDTH bound to: 64 - type: integer 
+	Parameter C_TAG_WIDTH bound to: 4 - type: integer 
+	Parameter C_ENABLE_MM2S_TKEEP bound to: 1 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rdmux' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:10681]
+	Parameter C_SEL_ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter C_MMAP_DWIDTH bound to: 64 - type: integer 
+	Parameter C_STREAM_DWIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rdmux' (12#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:10681]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized2' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+	Parameter C_DWIDTH bound to: 38 - type: integer 
+	Parameter C_DEPTH bound to: 3 - type: integer 
+	Parameter C_IS_ASYNC bound to: 0 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 2 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized2' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+	Parameter C_DWIDTH bound to: 38 - type: integer 
+	Parameter C_DEPTH bound to: 3 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized2' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+	Parameter C_DWIDTH bound to: 38 - type: integer 
+	Parameter C_DEPTH bound to: 3 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized2' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+	Parameter C_DEPTH bound to: 3 - type: integer 
+	Parameter C_DWIDTH bound to: 38 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized2' (12#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized2' (12#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized2' (12#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized2' (12#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_dre_src_align_reg_reg was removed.  [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:12886]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_dre_dest_align_reg_reg was removed.  [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:12887]
+WARNING: [Synth 8-6014] Unused sequential element sig_coelsc_reg_empty_reg was removed.  [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:13225]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rddata_cntl' (13#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:12185]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rd_sf' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:20208]
+	Parameter C_SF_FIFO_DEPTH bound to: 2048 - type: integer 
+	Parameter C_MAX_BURST_LEN bound to: 256 - type: integer 
+	Parameter C_DRE_IS_USED bound to: 0 - type: integer 
+	Parameter C_DRE_CNTL_FIFO_DEPTH bound to: 3 - type: integer 
+	Parameter C_DRE_ALIGN_WIDTH bound to: 1 - type: integer 
+	Parameter C_MMAP_DWIDTH bound to: 64 - type: integer 
+	Parameter C_STREAM_DWIDTH bound to: 16 - type: integer 
+	Parameter C_STRT_SF_OFFSET_WIDTH bound to: 2 - type: integer 
+	Parameter C_ENABLE_MM2S_TKEEP bound to: 1 - type: integer 
+	Parameter C_TAG_WIDTH bound to: 4 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized3' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+	Parameter C_DWIDTH bound to: 9 - type: integer 
+	Parameter C_DEPTH bound to: 4 - type: integer 
+	Parameter C_IS_ASYNC bound to: 0 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 2 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized3' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+	Parameter C_DWIDTH bound to: 9 - type: integer 
+	Parameter C_DEPTH bound to: 4 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized3' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+	Parameter C_DWIDTH bound to: 9 - type: integer 
+	Parameter C_DEPTH bound to: 4 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized3' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+	Parameter C_DEPTH bound to: 4 - type: integer 
+	Parameter C_DWIDTH bound to: 9 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized3' (13#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized3' (13#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized3' (13#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized3' (13#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
+	Parameter C_DWIDTH bound to: 75 - type: integer 
+	Parameter C_DEPTH bound to: 2048 - type: integer 
+	Parameter C_DATA_CNT_WIDTH bound to: 12 - type: integer 
+	Parameter C_NEED_ALMOST_EMPTY bound to: 0 - type: integer 
+	Parameter C_NEED_ALMOST_FULL bound to: 0 - type: integer 
+	Parameter C_USE_BLKMEM bound to: 1 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'sync_fifo_fg' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/4dac/hdl/lib_fifo_v1_0_rfs.vhd:2250]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_DCOUNT_WIDTH bound to: 12 - type: integer 
+	Parameter C_ENABLE_RLOCS bound to: 0 - type: integer 
+	Parameter C_HAS_DCOUNT bound to: 1 - type: integer 
+	Parameter C_HAS_RD_ACK bound to: 1 - type: integer 
+	Parameter C_HAS_RD_ERR bound to: 0 - type: integer 
+	Parameter C_HAS_WR_ACK bound to: 1 - type: integer 
+	Parameter C_HAS_WR_ERR bound to: 0 - type: integer 
+	Parameter C_HAS_ALMOST_FULL bound to: 0 - type: integer 
+	Parameter C_MEMORY_TYPE bound to: 1 - type: integer 
+	Parameter C_PORTS_DIFFER bound to: 0 - type: integer 
+	Parameter C_RD_ACK_LOW bound to: 0 - type: integer 
+	Parameter C_USE_EMBEDDED_REG bound to: 1 - type: integer 
+	Parameter C_READ_DATA_WIDTH bound to: 75 - type: integer 
+	Parameter C_READ_DEPTH bound to: 2048 - type: integer 
+	Parameter C_RD_ERR_LOW bound to: 0 - type: integer 
+	Parameter C_WR_ACK_LOW bound to: 0 - type: integer 
+	Parameter C_WR_ERR_LOW bound to: 0 - type: integer 
+	Parameter C_PRELOAD_REGS bound to: 1 - type: integer 
+	Parameter C_PRELOAD_LATENCY bound to: 0 - type: integer 
+	Parameter C_WRITE_DATA_WIDTH bound to: 75 - type: integer 
+	Parameter C_WRITE_DEPTH bound to: 2048 - type: integer 
+	Parameter C_SYNCHRONIZER_STAGE bound to: 2 - type: integer 
+	Parameter C_XPM_FIFO bound to: 1 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 2048 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 75 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
+	Parameter READ_DATA_WIDTH bound to: 75 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at 'D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1833' bound to instance 'xpm_fifo_sync_inst' of component 'xpm_fifo_sync' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/4dac/hdl/lib_fifo_v1_0_rfs.vhd:2627]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync' [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1833]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 2048 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 75 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 75 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter EN_ADV_FEATURE_SYNC bound to: 16'b0001111100011111 
+	Parameter P_FIFO_MEMORY_TYPE bound to: 2 - type: integer 
+	Parameter P_COMMON_CLOCK bound to: 1 - type: integer 
+	Parameter P_ECC_MODE bound to: 0 - type: integer 
+	Parameter P_READ_MODE bound to: 1 - type: integer 
+	Parameter P_WAKEUP_TIME bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+	Parameter COMMON_CLOCK bound to: 1 - type: integer 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: 2 - type: integer 
+	Parameter ECC_MODE bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 2048 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 75 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
+	Parameter READ_MODE bound to: 1 - type: integer 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 75 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter CDC_DEST_SYNC_FF bound to: 2 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
+	Parameter REMOVE_WR_RD_PROT_LOGIC bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter invalid bound to: 0 - type: integer 
+	Parameter stage1_valid bound to: 2 - type: integer 
+	Parameter stage2_valid bound to: 1 - type: integer 
+	Parameter both_stages_valid bound to: 3 - type: integer 
+	Parameter FIFO_MEM_TYPE bound to: 2 - type: integer 
+	Parameter RD_MODE bound to: 1 - type: integer 
+	Parameter ENABLE_ECC bound to: 0 - type: integer 
+	Parameter FIFO_READ_DEPTH bound to: 2048 - type: integer 
+	Parameter FIFO_SIZE bound to: 153600 - type: integer 
+	Parameter WR_WIDTH_LOG bound to: 7 - type: integer 
+	Parameter WR_DEPTH_LOG bound to: 11 - type: integer 
+	Parameter WR_PNTR_WIDTH bound to: 11 - type: integer 
+	Parameter RD_PNTR_WIDTH bound to: 11 - type: integer 
+	Parameter FULL_RST_VAL bound to: 1'b1 
+	Parameter WR_RD_RATIO bound to: 0 - type: integer 
+	Parameter PF_THRESH_ADJ bound to: 8 - type: integer 
+	Parameter PE_THRESH_ADJ bound to: 8 - type: integer 
+	Parameter PF_THRESH_MIN bound to: 5 - type: integer 
+	Parameter PF_THRESH_MAX bound to: 2043 - type: integer 
+	Parameter PE_THRESH_MIN bound to: 5 - type: integer 
+	Parameter PE_THRESH_MAX bound to: 2043 - type: integer 
+	Parameter WR_DC_WIDTH_EXT bound to: 12 - type: integer 
+	Parameter RD_DC_WIDTH_EXT bound to: 12 - type: integer 
+	Parameter RD_LATENCY bound to: 2 - type: integer 
+	Parameter WIDTH_RATIO bound to: 1 - type: integer 
+	Parameter EN_ADV_FEATURE bound to: 16'b0001111100011111 
+	Parameter EN_OF bound to: 1'b1 
+	Parameter EN_PF bound to: 1'b1 
+	Parameter EN_WDC bound to: 1'b1 
+	Parameter EN_AF bound to: 1'b1 
+	Parameter EN_WACK bound to: 1'b1 
+	Parameter FG_EQ_ASYM_DOUT bound to: 1'b0 
+	Parameter EN_UF bound to: 1'b1 
+	Parameter EN_PE bound to: 1'b1 
+	Parameter EN_RDC bound to: 1'b1 
+	Parameter EN_AE bound to: 1'b1 
+	Parameter EN_DVLD bound to: 1'b1 
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1740]
+	Parameter COUNTER_WIDTH bound to: 11 - type: integer 
+	Parameter RESET_VALUE bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (14#1) [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1740]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1740]
+	Parameter COUNTER_WIDTH bound to: 11 - type: integer 
+	Parameter RESET_VALUE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (14#1) [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1740]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+	Parameter MEMORY_TYPE bound to: 1 - type: integer 
+	Parameter MEMORY_SIZE bound to: 153600 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: 2 - type: integer 
+	Parameter CLOCKING_MODE bound to: 0 - type: integer 
+	Parameter ECC_MODE bound to: 0 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 75 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 75 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 75 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 2 - type: integer 
+	Parameter WRITE_MODE_A bound to: 2 - type: integer 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 75 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 75 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 75 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 2 - type: integer 
+	Parameter WRITE_MODE_B bound to: 2 - type: integer 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter P_MIN_WIDTH_DATA_A bound to: 75 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_B bound to: 75 - type: integer 
+	Parameter P_MIN_WIDTH_DATA bound to: 75 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_ECC bound to: 75 - type: integer 
+	Parameter P_MAX_DEPTH_DATA bound to: 2048 - type: integer 
+	Parameter P_ECC_MODE bound to: no_ecc - type: string 
+	Parameter P_MEMORY_OPT bound to: yes - type: string 
+	Parameter P_WIDTH_COL_WRITE_A bound to: 75 - type: integer 
+	Parameter P_WIDTH_COL_WRITE_B bound to: 75 - type: integer 
+	Parameter P_NUM_COLS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_COLS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_B bound to: 1 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_A bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_B bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_A bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_B bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_B bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_B bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_A bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_B bound to: 0 - type: integer 
+	Parameter P_SDP_WRITE_MODE bound to: no - type: string 
+	Parameter rsta_loop_iter bound to: 76 - type: integer 
+	Parameter rstb_loop_iter bound to: 76 - type: integer 
+	Parameter NUM_CHAR_LOC bound to: 0 - type: integer 
+	Parameter MAX_NUM_CHAR bound to: 0 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 75 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:2882]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "no" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (15#1) [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1788]
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (16#1) [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1788]
+INFO: [Synth 8-226] default block is never used [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1187]
+INFO: [Synth 8-226] default block is never used [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1233]
+INFO: [Synth 8-226] default block is never used [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1244]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1740]
+	Parameter COUNTER_WIDTH bound to: 2 - type: integer 
+	Parameter RESET_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (16#1) [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1740]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1504]
+	Parameter COMMON_CLOCK bound to: 1 - type: integer 
+	Parameter CDC_DEST_SYNC_FF bound to: 2 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (17#1) [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1504]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1740]
+	Parameter COUNTER_WIDTH bound to: 12 - type: integer 
+	Parameter RESET_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (17#1) [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1740]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized3' [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1740]
+	Parameter COUNTER_WIDTH bound to: 11 - type: integer 
+	Parameter RESET_VALUE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized3' (17#1) [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1740]
+WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:523]
+WARNING: [Synth 8-6014] Unused sequential element gen_pntr_flags_cc.gae_cc_std.ram_aempty_i_reg was removed.  [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:951]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "no" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-4471] merging register 'gen_fwft.empty_fwft_fb_reg' into 'gen_fwft.empty_fwft_i_reg' [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1292]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1292]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (18#1) [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "no" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync' (19#1) [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1833]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "no" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-256] done synthesizing module 'sync_fifo_fg' (20#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/4dac/hdl/lib_fifo_v1_0_rfs.vhd:2250]
+WARNING: [Synth 8-6014] Unused sequential element hold_ff_q_reg was removed.  [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1513]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "no" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord' (21#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "no" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rd_sf' (22#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:20208]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid_buf' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
+	Parameter C_WDATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* keep = "TRUE" *) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:19522]
+INFO: [Synth 8-5534] Detected attribute (* keep = "TRUE" *) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:19523]
+INFO: [Synth 8-5534] Detected attribute (* keep = "TRUE" *) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:19525]
+INFO: [Synth 8-5534] Detected attribute (* keep = "TRUE" *) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:19526]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid_buf' (23#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "no" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mm2s_full_wrap' (24#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:53572]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_omit_wrap' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:49604]
+	Parameter C_INCLUDE_S2MM bound to: 0 - type: integer 
+	Parameter C_S2MM_AWID bound to: 1 - type: integer 
+	Parameter C_S2MM_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_S2MM_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S2MM_MDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S2MM_SDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_INCLUDE_S2MM_STSFIFO bound to: 0 - type: integer 
+	Parameter C_S2MM_STSCMD_FIFO_DEPTH bound to: 4 - type: integer 
+	Parameter C_S2MM_STSCMD_IS_ASYNC bound to: 0 - type: integer 
+	Parameter C_INCLUDE_S2MM_DRE bound to: 0 - type: integer 
+	Parameter C_S2MM_BURST_SIZE bound to: 64 - type: integer 
+	Parameter C_S2MM_SUPPORT_INDET_BTT bound to: 0 - type: integer 
+	Parameter C_S2MM_ADDR_PIPE_DEPTH bound to: 3 - type: integer 
+	Parameter C_TAG_WIDTH bound to: 4 - type: integer 
+	Parameter C_ENABLE_CACHE_USER bound to: 0 - type: integer 
+	Parameter C_MCDMA bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_omit_wrap' (25#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:49604]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "no" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover' (26#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:55436]
+INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "no" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_datamover_0_0' (27#1) [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/synth/design_1_axi_datamover_0_0.vhd:97]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_aclk
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_aresetn
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmdsts_awclk
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmdsts_aresetn
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wvalid
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[71]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[70]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[69]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[68]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[67]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[66]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[65]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[64]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[63]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[62]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[61]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[60]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[59]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[58]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[57]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[56]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[55]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[54]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[53]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[52]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[51]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[50]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[49]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[48]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[47]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[46]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[45]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[44]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[43]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[42]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[41]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[40]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[39]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[38]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[37]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[36]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[35]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[34]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[33]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[32]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[31]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[30]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[29]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[28]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[27]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[26]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[25]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[24]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[23]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[22]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[21]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[20]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[19]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[18]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[17]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[16]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[15]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[14]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[13]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[12]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[11]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[10]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[9]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[8]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[7]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[6]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[5]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[4]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[3]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[2]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[1]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_cmd_wdata[0]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_sts_wready
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_allow_addr_req
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_awready
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_wready
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_bresp[1]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_bresp[0]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_bvalid
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_strm_wdata[31]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_strm_wdata[30]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_strm_wdata[29]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_strm_wdata[28]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_strm_wdata[27]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_strm_wdata[26]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_strm_wdata[25]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_strm_wdata[24]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_strm_wdata[23]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_strm_wdata[22]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_strm_wdata[21]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_strm_wdata[20]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_strm_wdata[19]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_strm_wdata[18]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_strm_wdata[17]
+WARNING: [Synth 8-3331] design axi_datamover_s2mm_omit_wrap has unconnected port s2mm_strm_wdata[16]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:02:16 ; elapsed = 00:02:18 . Memory (MB): peak = 901.117 ; gain = 362.512
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:16 ; elapsed = 00:02:19 . Memory (MB): peak = 901.117 ; gain = 362.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:16 ; elapsed = 00:02:19 . Memory (MB): peak = 901.117 ; gain = 362.512
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0.xdc] for cell 'U0'
+Parsing XDC File [D:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.runs/design_1_axi_datamover_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.runs/design_1_axi_datamover_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_clocks.xdc] for cell 'U0'
+Sourcing Tcl File [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
+Finished Sourcing Tcl File [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_axi_datamover_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_axi_datamover_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 934.258 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 934.258 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:02:24 ; elapsed = 00:02:27 . Memory (MB): peak = 934.258 ; gain = 395.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:24 ; elapsed = 00:02:27 . Memory (MB): peak = 934.258 ; gain = 395.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  D:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.runs/design_1_axi_datamover_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for U0/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER /\GEN_INCLUDE_MM2S_SF.I_RD_SF /I_DATA_FIFO/\BLK_MEM.I_SYNC_FIFOGEN_FIFO /\xpm_fifo_instance.xpm_fifo_sync_inst . (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:24 ; elapsed = 00:02:27 . Memory (MB): peak = 934.258 ; gain = 395.652
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "var_start_vector" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "var_end_vector" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "var_start_vector" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "var_end_vector" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-802] inferred FSM for state register 'sig_pcc_sm_state_reg' in module 'axi_datamover_pcc'
+INFO: [Synth 8-4471] merging register 'sig_coelsc_cmd_cmplt_reg_reg' into 'sig_coelsc_reg_full_reg' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:12425]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1056]
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:21645]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                         00000001 |                              000
+            wait_for_cmd |                         00000010 |                              001
+                  calc_1 |                         00000100 |                              010
+                  calc_2 |                         00001000 |                              011
+                  calc_3 |                         00010000 |                              100
+       wait_on_xfer_push |                         00100000 |                              101
+             chk_if_done |                         01000000 |                              110
+              error_trap |                         10000000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sig_pcc_sm_state_reg' using encoding 'one-hot' in module 'axi_datamover_pcc'
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:25 ; elapsed = 00:02:28 . Memory (MB): peak = 934.258 ; gain = 395.652
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 3     
+	   4 Input     12 Bit       Adders := 4     
+	   2 Input     11 Bit       Adders := 1     
+	   4 Input     11 Bit       Adders := 5     
+	   3 Input     11 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   3 Input      4 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
+	   3 Input      3 Bit       Adders := 5     
+	   2 Input      3 Bit       Adders := 3     
+	   4 Input      2 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               75 Bit    Registers := 2     
+	               32 Bit    Registers := 2     
+	               23 Bit    Registers := 1     
+	               16 Bit    Registers := 7     
+	               12 Bit    Registers := 5     
+	               11 Bit    Registers := 6     
+	                8 Bit    Registers := 6     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 10    
+	                3 Bit    Registers := 11    
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 130   
++---RAMs : 
+	             150K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 4     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 15    
+	   8 Input      8 Bit        Muxes := 5     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 35    
+	   4 Input      2 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 50    
+	   8 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module axi_datamover_reset 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module cntr_incr_decr_addn_f 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+Module srl_fifo_rbu_f 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module axi_datamover_fifo 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 4     
+Module srl_fifo_rbu_f__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module axi_datamover_fifo__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 4     
+Module axi_datamover_rd_status_cntl 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
+Module axi_datamover_strb_gen2 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      4 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   8 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module axi_datamover_strb_gen2__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   8 Input      8 Bit        Muxes := 2     
+Module axi_datamover_pcc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               23 Bit    Registers := 1     
+	               16 Bit    Registers := 5     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 27    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 3     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 7     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
+	   8 Input      1 Bit        Muxes := 3     
+Module srl_fifo_rbu_f__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module axi_datamover_fifo__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 4     
+Module axi_datamover_addr_cntl 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
+Module srl_fifo_rbu_f__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module axi_datamover_fifo__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 4     
+Module axi_datamover_rddata_cntl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 20    
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+Module xpm_counter_updn 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     11 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+Module xpm_counter_updn__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     11 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+Module xpm_memory_base 
+Detailed RTL Component Info : 
++---Registers : 
+	               75 Bit    Registers := 2     
++---RAMs : 
+	             150K Bit         RAMs := 1     
+Module xpm_fifo_reg_bit 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module xpm_counter_updn__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+Module xpm_fifo_rst 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+Module xpm_counter_updn__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     12 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+Module xpm_counter_updn__parameterized3 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     11 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+Module xpm_fifo_base 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   4 Input     12 Bit       Adders := 2     
+	   3 Input     11 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 3     
+	               11 Bit    Registers := 1     
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 31    
+	   4 Input      2 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 1     
+Module axi_datamover_sfifo_autord 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 3     
+Module srl_fifo_rbu_f__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module axi_datamover_fifo__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 4     
+Module axi_datamover_rd_sf 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 1     
+Module axi_datamover_skid_buf 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module axi_datamover_mm2s_full_wrap 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/sig_init_reg_reg' into 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/sig_init_reg_reg' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1961]
+INFO: [Synth 8-4471] merging register 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/sig_init_reg2_reg' into 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/sig_init_reg2_reg' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1962]
+INFO: [Synth 8-4471] merging register 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/sig_init_reg_reg' into 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_mmap_reset_reg_reg' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1961]
+INFO: [Synth 8-4471] merging register 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_input_user_type_reg_reg[3:0]' into 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_input_cache_type_reg_reg[3:0]' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:8040]
+INFO: [Synth 8-4471] merging register 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/sig_init_reg_reg' into 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_mmap_reset_reg_reg' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1961]
+INFO: [Synth 8-4471] merging register 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_RD_DATA_CNTL/GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO/sig_init_reg_reg' into 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_mmap_reset_reg_reg' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1961]
+INFO: [Synth 8-4471] merging register 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_RD_DATA_CNTL/GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO/sig_init_reg2_reg' into 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/sig_init_reg2_reg' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1962]
+INFO: [Synth 8-4471] merging register 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_RD_DATA_CNTL/sig_rd_xfer_cmplt_reg' into 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_RD_DATA_CNTL/sig_last_mmap_dbeat_reg_reg' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:12507]
+INFO: [Synth 8-4471] merging register 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/OMIT_DRE_CNTL.I_DRE_CNTL_FIFO/sig_init_reg_reg' into 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_mmap_reset_reg_reg' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1961]
+INFO: [Synth 8-4471] merging register 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/OMIT_DRE_CNTL.I_DRE_CNTL_FIFO/sig_init_reg2_reg' into 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/sig_init_reg2_reg' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1962]
+INFO: [Synth 8-4471] merging register 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/sig_reset_reg_reg' into 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_mmap_reset_reg_reg' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:19583]
+INFO: [Synth 8-4471] merging register 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/sig_stop_request_reg' into 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/sig_sready_stop_reg_reg' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:19578]
+INFO: [Synth 8-4471] merging register 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/sig_init_reg2_reg' into 'GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/sig_init_reg2_reg' [d:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/e644/hdl/axi_datamover_v5_1_vh_rfs.vhd:1962]
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5784] Optimized 1 bits of RAM "gen_wr_a.gen_word_narrow.mem_reg" due to constant propagation. Old ram width 75 bits, new ram width 74 bits.
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-3886] merging instance 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg[12]' (FDRE) to 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg[13]' (FDRE) to 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg[14]' (FDRE) to 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg[15] )
+INFO: [Synth 8-3886] merging instance 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_sm_ld_calc3_reg_reg' (FDR) to 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/FSM_onehot_sig_pcc_sm_state_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/FSM_onehot_sig_pcc_sm_state_reg[3]' (FDR) to 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_sm_ld_calc2_reg_reg'
+INFO: [Synth 8-3886] merging instance 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/sig_sready_stop_reg_reg' (FDRE) to 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/sig_sstrb_stop_mask_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/sig_sstrb_stop_mask_reg[0]' (FDRE) to 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/sig_sstrb_stop_mask_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/sig_next_burst_reg_reg[1]' (FDRE) to 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/sig_next_size_reg_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_ADDR_CNTL/sig_next_size_reg_reg[2] )
+INFO: [Synth 8-3886] merging instance 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_sm_ld_calc1_reg_reg' (FDR) to 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/FSM_onehot_sig_pcc_sm_state_reg[2]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:30 ; elapsed = 00:02:33 . Memory (MB): peak = 934.258 ; gain = 395.652
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 75(NO_CHANGE)    | W |   | 2 K x 75(NO_CHANGE)    |   | R | Port A and B     | 1      | 4      | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:39 ; elapsed = 00:02:42 . Memory (MB): peak = 934.258 ; gain = 395.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:41 ; elapsed = 00:02:44 . Memory (MB): peak = 934.258 ; gain = 395.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 75(NO_CHANGE)    | W |   | 2 K x 75(NO_CHANGE)    |   | R | Port A and B     | 1      | 4      | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_bytes_to_mbaa_ireg1_reg[11]' (FDRE) to 'U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_aligned_ireg1_reg'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:42 ; elapsed = 00:02:45 . Memory (MB): peak = 938.551 ; gain = 399.945
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:44 ; elapsed = 00:02:47 . Memory (MB): peak = 943.340 ; gain = 404.734
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:44 ; elapsed = 00:02:47 . Memory (MB): peak = 943.340 ; gain = 404.734
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:44 ; elapsed = 00:02:47 . Memory (MB): peak = 943.340 ; gain = 404.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:44 ; elapsed = 00:02:47 . Memory (MB): peak = 943.340 ; gain = 404.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:44 ; elapsed = 00:02:48 . Memory (MB): peak = 943.340 ; gain = 404.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:44 ; elapsed = 00:02:48 . Memory (MB): peak = 943.340 ; gain = 404.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+--------------------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name                 | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+--------------------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | INFERRED_GEN.data_reg[3] | 68     | 68         | 68     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | INFERRED_GEN.data_reg[3] | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__2     | INFERRED_GEN.data_reg[2] | 59     | 59         | 59     | 0       | 0      | 0      | 0      | 
+|dsrl__3     | INFERRED_GEN.data_reg[2] | 38     | 38         | 38     | 0       | 0      | 0      | 0      | 
+|dsrl__4     | INFERRED_GEN.data_reg[3] | 9      | 9          | 9      | 0       | 0      | 0      | 0      | 
++------------+--------------------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |    48|
+|2     |LUT1       |     5|
+|3     |LUT2       |    90|
+|4     |LUT3       |    93|
+|5     |LUT4       |   114|
+|6     |LUT5       |   111|
+|7     |LUT6       |   156|
+|8     |MUXF7      |     5|
+|9     |RAMB18E1_1 |     1|
+|10    |RAMB36E1_1 |     4|
+|11    |SRL16E     |   147|
+|12    |FDRE       |   480|
+|13    |FDSE       |    37|
++------+-----------+------+
+
+Report Instance Areas: 
++------+---------------------------------------------------+-----------------------------------+------+
+|      |Instance                                           |Module                             |Cells |
++------+---------------------------------------------------+-----------------------------------+------+
+|1     |top                                                |                                   |  1291|
+|2     |  U0                                               |axi_datamover                      |  1291|
+|3     |    \GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER             |axi_datamover_mm2s_full_wrap       |  1290|
+|4     |      \ENABLE_AXIS_SKID.I_MM2S_SKID_BUF            |axi_datamover_skid_buf             |    70|
+|5     |      \GEN_INCLUDE_MM2S_SF.I_RD_SF                 |axi_datamover_rd_sf                |   322|
+|6     |        I_DATA_FIFO                                |axi_datamover_sfifo_autord         |   291|
+|7     |          \BLK_MEM.I_SYNC_FIFOGEN_FIFO             |sync_fifo_fg                       |   291|
+|8     |            \xpm_fifo_instance.xpm_fifo_sync_inst  |xpm_fifo_sync                      |   259|
+|9     |              xpm_fifo_base_inst                   |xpm_fifo_base                      |   259|
+|10    |                \gen_sdpram.xpm_memory_base_inst   |xpm_memory_base                    |     5|
+|11    |                \gen_fwft.rdpp1_inst               |xpm_counter_updn__parameterized1   |     8|
+|12    |                rdp_inst                           |xpm_counter_updn__parameterized2   |    65|
+|13    |                rdpp1_inst                         |xpm_counter_updn__parameterized3   |    15|
+|14    |                rst_d1_inst                        |xpm_fifo_reg_bit                   |    11|
+|15    |                wrp_inst                           |xpm_counter_updn__parameterized2_4 |    36|
+|16    |                wrpp1_inst                         |xpm_counter_updn__parameterized3_5 |    27|
+|17    |                wrpp2_inst                         |xpm_counter_updn__parameterized0   |    14|
+|18    |                xpm_fifo_rst_inst                  |xpm_fifo_rst                       |    12|
+|19    |        \OMIT_DRE_CNTL.I_DRE_CNTL_FIFO             |axi_datamover_fifo__parameterized3 |    14|
+|20    |          \USE_SRL_FIFO.I_SYNC_FIFO                |srl_fifo_f__parameterized3         |    11|
+|21    |            I_SRL_FIFO_RBU_F                       |srl_fifo_rbu_f__parameterized3     |    11|
+|22    |              CNTR_INCR_DECR_ADDN_F_I              |cntr_incr_decr_addn_f_3            |     7|
+|23    |              DYNSHREG_F_I                         |dynshreg_f__parameterized3         |     3|
+|24    |      I_ADDR_CNTL                                  |axi_datamover_addr_cntl            |   112|
+|25    |        \GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO            |axi_datamover_fifo__parameterized1 |    61|
+|26    |          \USE_SRL_FIFO.I_SYNC_FIFO                |srl_fifo_f__parameterized1         |    56|
+|27    |            I_SRL_FIFO_RBU_F                       |srl_fifo_rbu_f__parameterized1     |    56|
+|28    |              CNTR_INCR_DECR_ADDN_F_I              |cntr_incr_decr_addn_f_2            |     9|
+|29    |              DYNSHREG_F_I                         |dynshreg_f__parameterized1         |    46|
+|30    |      I_CMD_STATUS                                 |axi_datamover_cmd_status           |   100|
+|31    |        \GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO        |axi_datamover_fifo__parameterized0 |    23|
+|32    |          \USE_SRL_FIFO.I_SYNC_FIFO                |srl_fifo_f__parameterized0         |    20|
+|33    |            I_SRL_FIFO_RBU_F                       |srl_fifo_rbu_f__parameterized0     |    20|
+|34    |              CNTR_INCR_DECR_ADDN_F_I              |cntr_incr_decr_addn_f_1            |     8|
+|35    |              DYNSHREG_F_I                         |dynshreg_f__parameterized0         |     9|
+|36    |        I_CMD_FIFO                                 |axi_datamover_fifo                 |    77|
+|37    |          \USE_SRL_FIFO.I_SYNC_FIFO                |srl_fifo_f                         |    74|
+|38    |            I_SRL_FIFO_RBU_F                       |srl_fifo_rbu_f                     |    74|
+|39    |              CNTR_INCR_DECR_ADDN_F_I              |cntr_incr_decr_addn_f_0            |     9|
+|40    |              DYNSHREG_F_I                         |dynshreg_f                         |    63|
+|41    |      I_MSTR_PCC                                   |axi_datamover_pcc                  |   497|
+|42    |      I_RD_DATA_CNTL                               |axi_datamover_rddata_cntl          |   160|
+|43    |        \GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO       |axi_datamover_fifo__parameterized2 |    66|
+|44    |          \USE_SRL_FIFO.I_SYNC_FIFO                |srl_fifo_f__parameterized2         |    63|
+|45    |            I_SRL_FIFO_RBU_F                       |srl_fifo_rbu_f__parameterized2     |    63|
+|46    |              CNTR_INCR_DECR_ADDN_F_I              |cntr_incr_decr_addn_f              |    16|
+|47    |              DYNSHREG_F_I                         |dynshreg_f__parameterized2         |    44|
+|48    |      I_RD_STATUS_CNTLR                            |axi_datamover_rd_status_cntl       |    21|
+|49    |      I_RESET                                      |axi_datamover_reset                |     8|
++------+---------------------------------------------------+-----------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:44 ; elapsed = 00:02:48 . Memory (MB): peak = 943.340 ; gain = 404.734
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 217 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:02:44 . Memory (MB): peak = 943.340 ; gain = 371.594
+Synthesis Optimization Complete : Time (s): cpu = 00:02:45 ; elapsed = 00:02:48 . Memory (MB): peak = 943.340 ; gain = 404.734
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 58 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 943.340 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+184 Infos, 120 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:52 ; elapsed = 00:03:25 . Memory (MB): peak = 943.340 ; gain = 645.949
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 943.340 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.runs/design_1_axi_datamover_0_0_synth_1/design_1_axi_datamover_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_datamover_0_0, cache-ID = 351d8800b02a765a
+INFO: [Coretcl 2-1174] Renamed 48 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 943.340 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.runs/design_1_axi_datamover_0_0_synth_1/design_1_axi_datamover_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_axi_datamover_0_0_utilization_synth.rpt -pb design_1_axi_datamover_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue May  5 18:18:28 2020...

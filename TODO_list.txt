@@ -1,0 +1,27 @@
+PRIORITY:
+	linux :
+		- Build new linux image with more DDR3 allocated to dma : 
+		currently : last 32MB for dma : addr 0x1E00_0000 to 0x1FFF_FFFF 
+		(https://github.com/pavel-demin/red-pitaya-notes/issues/719¸)
+		- Copy file data directly to the DDR3 instead of using an intermediate file "/opt/data.dat" (There was some problem where the data was sent as int32 instead of int16)
+
+
+	python:
+		- make sure there is no unnecessary copy of data_in, which might slow the program
+
+	c: monitor-tcp:
+		- add offset to map_base_dma
+			from    : size_t size = fread(map_base_dma, 1, MAP_SIZE_DMA ,file_pointer);
+
+			to (??) : size_t size = fread(map_base_dma+offset, 1, MAP_SIZE_DMA ,file_pointer);
+
+	FPGA
+		- make sure voltage are well mapped (e.g. if I send DC instead of waveform) because I'm not sure the DACs are mapped in twos complement
+		- use a FIFO at the DataMover output are read internal ddr faster. Once in a while (> 10 min, or when you use the PS to do others things. i.e., you connect to Red Pitaya via ssh), a point is dropped
+
+
+
+	Others : 
+	- Merge Waveform generator with acquisition card (+ ability to do both at the same time on different portion of ddr3)
+
+
