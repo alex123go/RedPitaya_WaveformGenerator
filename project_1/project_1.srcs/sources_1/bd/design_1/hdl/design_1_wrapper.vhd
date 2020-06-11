@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
---Date        : Thu May  7 10:50:27 2020
+--Date        : Thu Jun 11 14:22:21 2020
 --Host        : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -71,16 +71,7 @@ architecture STRUCTURE of design_1_wrapper is
     dac_sel_o : out STD_LOGIC;
     dac_clk_o : out STD_LOGIC;
     dac_rst_o : out STD_LOGIC;
-    Vaux1_0_v_n : in STD_LOGIC;
-    Vaux1_0_v_p : in STD_LOGIC;
-    FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
-    FIXED_IO_ddr_vrn : inout STD_LOGIC;
-    FIXED_IO_ddr_vrp : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC;
-    FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC;
-    Vaux8_0_v_n : in STD_LOGIC;
-    Vaux8_0_v_p : in STD_LOGIC;
+    led_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -96,13 +87,22 @@ architecture STRUCTURE of design_1_wrapper is
     DDR_dq : inout STD_LOGIC_VECTOR ( 31 downto 0 );
     DDR_dqs_n : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     DDR_dqs_p : inout STD_LOGIC_VECTOR ( 3 downto 0 );
-    Vaux0_0_v_n : in STD_LOGIC;
-    Vaux0_0_v_p : in STD_LOGIC;
-    Vaux9_0_v_n : in STD_LOGIC;
-    Vaux9_0_v_p : in STD_LOGIC;
+    FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
+    FIXED_IO_ddr_vrn : inout STD_LOGIC;
+    FIXED_IO_ddr_vrp : inout STD_LOGIC;
+    FIXED_IO_ps_srstb : inout STD_LOGIC;
+    FIXED_IO_ps_clk : inout STD_LOGIC;
+    FIXED_IO_ps_porb : inout STD_LOGIC;
     Vp_Vn_0_v_n : in STD_LOGIC;
     Vp_Vn_0_v_p : in STD_LOGIC;
-    led_o : out STD_LOGIC_VECTOR ( 7 downto 0 )
+    Vaux8_0_v_n : in STD_LOGIC;
+    Vaux8_0_v_p : in STD_LOGIC;
+    Vaux9_0_v_n : in STD_LOGIC;
+    Vaux9_0_v_p : in STD_LOGIC;
+    Vaux1_0_v_n : in STD_LOGIC;
+    Vaux1_0_v_p : in STD_LOGIC;
+    Vaux0_0_v_n : in STD_LOGIC;
+    Vaux0_0_v_p : in STD_LOGIC
   );
   end component design_1;
 begin

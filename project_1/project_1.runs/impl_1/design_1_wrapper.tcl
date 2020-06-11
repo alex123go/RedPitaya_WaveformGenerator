@@ -69,24 +69,24 @@ set rc [catch {
   create_project -in_memory -part xc7z010clg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir D:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.cache/wt [current_project]
-  set_property parent.project_path D:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.xpr [current_project]
+  set_property webtalk.parent_dir D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.cache/wt [current_project]
+  set_property parent.project_path D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.xpr [current_project]
   set_property ip_repo_paths {
-  D:/Red_Pitaya/Acq_Card/ip_repo/oscilloscope_1.0
-  D:/Red_Pitaya/Acq_Card/ip_repo/oscilloscope_1.0
-  D:/Synology/SynologyDrive/RedPitaya/IP/Data_throughput_DDR_1.0
-  D:/Synology/SynologyDrive/RedPitaya/DataMover_throughput/ip_repo/DataReader_through_RAM_1.0
+  D:/Users/Alex/Documents/GitHub/Acq_Card/ip_repo/oscilloscope_1.0
+  D:/Users/Alex/Documents/GitHub/Acq_Card/ip_repo/oscilloscope_1.0
+  D:/Users/Alex/Documents/Synology/SynologyDrive/RedPitaya/IP/Data_throughput_DDR_1.0
+  D:/../Synology/SynologyDrive/RedPitaya/DataMover_throughput/ip_repo/DataReader_through_RAM_1.0
 } [current_project]
   update_ip_catalog
-  set_property ip_output_repo D:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.cache/ip [current_project]
+  set_property ip_output_repo D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet D:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files D:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd
+  add_files D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
-  read_xdc D:/Red_Pitaya/RedPitaya_WaveformGen/project_1/project_1.srcs/constrs_1/new/red_pitaya_constraint.xdc
+  read_xdc D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/constrs_1/new/red_pitaya_constraint.xdc
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7z010clg400-1
   set_param project.isImplRun false

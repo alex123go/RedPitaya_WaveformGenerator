@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Jun 11 12:39:37 2020
+# Process ID: 9764
+# Current directory: D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/RedPitaya_WaveformGenerator/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16932 D:\Users\Alex\Documents\GitHub\RedPitaya_WaveformGenerator\RedPitaya_WaveformGenerator\project_1\project_1.xpr
+# Log file: D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/RedPitaya_WaveformGenerator/project_1/vivado.log
+# Journal file: D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/RedPitaya_WaveformGenerator/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/RedPitaya_WaveformGenerator/project_1/project_1.xpr
+open_bd_design {D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_2
+endgroup
+set_property -dict [list CONFIG.CONST_WIDTH {32} CONFIG.CONST_VAL {0x0DAC0001}] [get_bd_cells xlconstant_2]
+set_property name firmwareVersion [get_bd_cells xlconstant_2]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_3
+endgroup
+set_property name axi_gpio_firmwareVersion [get_bd_cells axi_gpio_3]
+set_property -dict [list CONFIG.C_ALL_INPUTS {1}] [get_bd_cells axi_gpio_firmwareVersion]
+connect_bd_net [get_bd_pins firmwareVersion/dout] [get_bd_pins axi_gpio_firmwareVersion/gpio_io_i]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (125 MHz)} Clk_slave {Auto} Clk_xbar {/clk_wiz_0/clk_out1 (125 MHz)} Master {/processing_system7_0/M_AXI_GP1} Slave {/axi_gpio_firmwareVersion/S_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_firmwareVersion/S_AXI]
+regenerate_bd_layout -routing
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+check_ip_cache -clear_output_repo
+config_ip_cache -clear_output_repo
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
