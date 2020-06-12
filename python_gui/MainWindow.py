@@ -44,7 +44,7 @@ class controller(object):
 
 		devices_data = {} # Possibilité de mettre un dictionnaire avec mac address et nom du Red Pitaya (qui peut aussi faire le lien avec un fichier de config et une couleur de background du gui)
 							
-		strFPGAFirmware=r'WaveformGen.bit'
+		strFPGAFirmware=r'WaveformGen_2DAC.bit'
 		strCPUFirmware=u'../ZynqFolder/monitor-tcp/monitor-tcp'
 		
 		self.initial_config = initialConfiguration(self.dev, devices_data=devices_data, strFPGAFirmware=strFPGAFirmware, strCPUFirmware=strCPUFirmware)
