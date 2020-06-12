@@ -19,6 +19,7 @@ class WaveformGenerator(QtWidgets.QMainWindow):
 
 	# MAXPOINTS   = int((0x1FFFFFFF-0x1E000000+0)/2) # Warning, if I put the '+1', there is an error : maybe a signal that wrap to 0 in the FPGA
 	MAXPOINTS = 2**23/2 # maximum number of bytes for a single cmd in DataMover Xilinx's IP (/2 because 2 bytes per data point)
+	MAXPOINTS = MAXPOINTS/2 # When 2 DACs in parallel (which is always in this software version)
 
 	xadc_base_addr    = 0x0001_0000
 	N_BYTES_REG       = 0x000A_0000
@@ -92,7 +93,8 @@ class WaveformGenerator(QtWidgets.QMainWindow):
 		self.numberOfPoints = numberOfPoints		
 
 
-		self.dev.write_Zynq_AXI_register_uint32(self.N_BYTES_REG, 2*self.numberOfPoints)
+		# self.dev.write_Zynq_AXI_register_uint32(self.N_BYTES_REG, 2*self.numberOfPoints)
+		self.dev.write_Zynq_AXI_register_uint32(self.N_BYTES_REG, 4*self.numberOfPoints) # 4 bytes/point (2 bytes/DAC)
 
 
 	def startWFG(self):
@@ -121,11 +123,13 @@ class WaveformGenerator(QtWidgets.QMainWindow):
 	def loadWave(self):
 		# find file size
 		sizeInBytes = os.path.getsize(self.lineEdit_file.text())
-		self.nptsInFile = int(sizeInBytes/2)
+		# self.nptsInFile = int(sizeInBytes/2)
+		self.nptsInFile = int(sizeInBytes/4) # 4 bytes per points
 
 		# write n_pts to lineEdit + send to FPGA
 		self.lineEdit_nPts.blockSignals(True)
-		self.lineEdit_nPts.setText(str(int(sizeInBytes/2)))
+		# self.lineEdit_nPts.setText(str(int(sizeInBytes/2)))
+		self.lineEdit_nPts.setText(str(int(sizeInBytes/4))) # 4 bytes per points
 		self.lineEdit_nPts.blockSignals(False)
 
 		self.sendNumberOfPoints()

@@ -24,3 +24,38 @@ save_bd_design
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 4
 wait_on_run impl_1
+startgroup
+set_property -dict [list CONFIG.CONST_VAL {0x0DAC0002}] [get_bd_cells firmwareVersion]
+endgroup
+startgroup
+set_property -dict [list CONFIG.c_m_axis_mm2s_tdata_width {32}] [get_bd_cells axi_datamover_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.DIN_WIDTH {32} CONFIG.DIN_TO {2} CONFIG.DIN_FROM {15}] [get_bd_cells xlslice_0]
+endgroup
+copy_bd_objs /  [get_bd_cells {xlslice_0}]
+set_property -dict [list CONFIG.DIN_TO {18} CONFIG.DIN_FROM {31} CONFIG.DIN_FROM {31} CONFIG.DOUT_WIDTH {14}] [get_bd_cells xlslice_1]
+connect_bd_net [get_bd_pins xlslice_1/Din] [get_bd_pins axi_datamover_0/m_axis_mm2s_tdata]
+startgroup
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {5}] [get_bd_cells ila_0]
+endgroup
+connect_bd_net [get_bd_pins ila_0/probe4] [get_bd_pins WaveformGen_ctrl_0/s_axis_mm2s_cmd_tdata]
+disconnect_bd_net /WaveformGen_ctrl_0_s_axis_mm2s_cmd_tdata [get_bd_pins ila_0/probe3]
+connect_bd_net [get_bd_pins ila_0/probe3] [get_bd_pins axi_datamover_0/m_axis_mm2s_tvalid]
+disconnect_bd_net /axi_datamover_0_m_axis_mm2s_tvalid [get_bd_pins ila_0/probe2]
+startgroup
+connect_bd_net [get_bd_pins xlslice_1/Dout] [get_bd_pins ila_0/probe2]
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_PROBE4_WIDTH {72} CONFIG.C_PROBE3_WIDTH {1} CONFIG.C_PROBE2_WIDTH {14}] [get_bd_cells ila_0]
+endgroup
+disconnect_bd_net /xlconstant_1_dout [get_bd_pins DACs_wrapper_0/dac_b_tvalid]
+connect_bd_net [get_bd_pins DACs_wrapper_0/dac_b_tvalid] [get_bd_pins axi_datamover_0/m_axis_mm2s_tvalid]
+connect_bd_net [get_bd_pins xlslice_1/Dout] [get_bd_pins DACs_wrapper_0/dac_b]
+save_bd_design
+reset_run synth_1
+reset_run design_1_axi_datamover_0_0_synth_1
+reset_run design_1_ila_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+connect_hw_server

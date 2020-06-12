@@ -58,11 +58,11 @@ module design_1_xlslice_0_0 (
   Dout
 );
 
-input wire [15 : 0] Din;
+input wire [31 : 0] Din;
 output wire [13 : 0] Dout;
 
   xlslice_v1_0_2_xlslice #(
-    .DIN_WIDTH(16),
+    .DIN_WIDTH(32),
     .DIN_FROM(15),
     .DIN_TO(2)
   ) inst (

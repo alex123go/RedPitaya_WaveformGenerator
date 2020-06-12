@@ -18,7 +18,7 @@ from WaveformGenerator import WaveformGenerator
 class controller(object):
 
 	FIRMWARE_VERSION_ADDRESS  = 0x000F0000 # offset of 0x8000_0000
-	EXPECTED_FIRMWARE_VERSION = 0x0DAC0001
+	EXPECTED_FIRMWARE_VERSION = 0x0DAC0002
 
 
 	def __init__(self):

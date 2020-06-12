@@ -308,7 +308,7 @@ proc create_root_design { parentCell } {
    CONFIG.c_m_axi_s2mm_awid {1} \
    CONFIG.c_m_axi_s2mm_data_width {32} \
    CONFIG.c_m_axi_s2mm_id_width {4} \
-   CONFIG.c_m_axis_mm2s_tdata_width {16} \
+   CONFIG.c_m_axis_mm2s_tdata_width {32} \
    CONFIG.c_mm2s_btt_used {23} \
    CONFIG.c_mm2s_burst_size {256} \
    CONFIG.c_mm2s_include_sf {true} \
@@ -390,7 +390,7 @@ proc create_root_design { parentCell } {
   # Create instance: firmwareVersion, and set properties
   set firmwareVersion [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 firmwareVersion ]
   set_property -dict [ list \
-   CONFIG.CONST_VAL {0x0DAC0001} \
+   CONFIG.CONST_VAL {0x0DAC0002} \
    CONFIG.CONST_WIDTH {32} \
  ] $firmwareVersion
 
@@ -404,9 +404,11 @@ proc create_root_design { parentCell } {
    CONFIG.C_DATA_DEPTH {8192} \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {4} \
+   CONFIG.C_NUM_OF_PROBES {5} \
    CONFIG.C_PROBE1_WIDTH {14} \
-   CONFIG.C_PROBE3_WIDTH {72} \
+   CONFIG.C_PROBE2_WIDTH {14} \
+   CONFIG.C_PROBE3_WIDTH {1} \
+   CONFIG.C_PROBE4_WIDTH {72} \
    CONFIG.C_TRIGIN_EN {true} \
  ] $ila_0
 
@@ -1122,9 +1124,18 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.DIN_FROM {15} \
    CONFIG.DIN_TO {2} \
-   CONFIG.DIN_WIDTH {16} \
+   CONFIG.DIN_WIDTH {32} \
    CONFIG.DOUT_WIDTH {14} \
  ] $xlslice_0
+
+  # Create instance: xlslice_1, and set properties
+  set xlslice_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_1 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {31} \
+   CONFIG.DIN_TO {18} \
+   CONFIG.DIN_WIDTH {32} \
+   CONFIG.DOUT_WIDTH {14} \
+ ] $xlslice_1
 
   # Create interface connections
   connect_bd_intf_net -intf_net Vaux0_0_1 [get_bd_intf_ports Vaux0_0] [get_bd_intf_pins xadc_wiz_0/Vaux0]
@@ -1151,14 +1162,14 @@ proc create_root_design { parentCell } {
   connect_bd_net -net DACs_wrapper_0_dac_sel_o [get_bd_ports dac_sel_o] [get_bd_pins DACs_wrapper_0/dac_sel_o]
   connect_bd_net -net DACs_wrapper_0_dac_wrt_o [get_bd_ports dac_wrt_o] [get_bd_pins DACs_wrapper_0/dac_wrt_o]
   connect_bd_net -net Net [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
-  connect_bd_net -net WaveformGen_ctrl_0_s_axis_mm2s_cmd_tdata [get_bd_pins WaveformGen_ctrl_0/s_axis_mm2s_cmd_tdata] [get_bd_pins axi_datamover_0/s_axis_mm2s_cmd_tdata] [get_bd_pins ila_0/probe3]
+  connect_bd_net -net WaveformGen_ctrl_0_s_axis_mm2s_cmd_tdata [get_bd_pins WaveformGen_ctrl_0/s_axis_mm2s_cmd_tdata] [get_bd_pins axi_datamover_0/s_axis_mm2s_cmd_tdata] [get_bd_pins ila_0/probe4]
   connect_bd_net -net WaveformGen_ctrl_0_s_axis_mm2s_cmd_tvalid [get_bd_pins WaveformGen_ctrl_0/s_axis_mm2s_cmd_tvalid] [get_bd_pins axi_datamover_0/s_axis_mm2s_cmd_tvalid] [get_bd_pins ila_0/probe0] [get_bd_pins ila_0/trig_in]
   connect_bd_net -net adc_clk_n_i_1 [get_bd_ports adc_clk_n_i] [get_bd_pins clk_wiz_0/clk_in1_n]
   connect_bd_net -net adc_clk_p_i_1 [get_bd_ports adc_clk_p_i] [get_bd_pins clk_wiz_0/clk_in1_p]
   connect_bd_net -net adc_dat_a_i [get_bd_ports adc_dat_a_i] [get_bd_pins ADCs_wrapper_0/adc_dat_a_i]
   connect_bd_net -net adc_dat_b_i [get_bd_ports adc_dat_b_i] [get_bd_pins ADCs_wrapper_0/adc_dat_b_i]
-  connect_bd_net -net axi_datamover_0_m_axis_mm2s_tdata [get_bd_pins axi_datamover_0/m_axis_mm2s_tdata] [get_bd_pins xlslice_0/Din]
-  connect_bd_net -net axi_datamover_0_m_axis_mm2s_tvalid [get_bd_pins DACs_wrapper_0/dac_a_tvalid] [get_bd_pins axi_datamover_0/m_axis_mm2s_tvalid] [get_bd_pins ila_0/probe2]
+  connect_bd_net -net axi_datamover_0_m_axis_mm2s_tdata [get_bd_pins axi_datamover_0/m_axis_mm2s_tdata] [get_bd_pins xlslice_0/Din] [get_bd_pins xlslice_1/Din]
+  connect_bd_net -net axi_datamover_0_m_axis_mm2s_tvalid [get_bd_pins DACs_wrapper_0/dac_a_tvalid] [get_bd_pins DACs_wrapper_0/dac_b_tvalid] [get_bd_pins axi_datamover_0/m_axis_mm2s_tvalid] [get_bd_pins ila_0/probe3]
   connect_bd_net -net axi_datamover_0_mm2s_err [get_bd_pins axi_datamover_0/mm2s_err] [get_bd_pins axi_gpio_2/gpio_io_i] [get_bd_pins xlconcat_0/In7]
   connect_bd_net -net axi_datamover_0_s_axis_mm2s_cmd_tready [get_bd_pins WaveformGen_ctrl_0/s_axis_mm2s_cmd_tready] [get_bd_pins axi_datamover_0/s_axis_mm2s_cmd_tready]
   connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins WaveformGen_ctrl_0/n_bytes] [get_bd_pins axi_gpio_0/gpio_io_o]
@@ -1172,9 +1183,10 @@ proc create_root_design { parentCell } {
   connect_bd_net -net xadc_wiz_0_ip2intc_irpt [get_bd_pins processing_system7_0/IRQ_F2P] [get_bd_pins xadc_wiz_0/ip2intc_irpt]
   connect_bd_net -net xlconcat_0_dout [get_bd_ports led_o] [get_bd_pins xlconcat_0/dout]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins axi_datamover_0/m_axis_mm2s_tready] [get_bd_pins xlconstant_0/dout]
-  connect_bd_net -net xlconstant_1_dout [get_bd_pins DACs_wrapper_0/dac_b_tvalid] [get_bd_pins xlconcat_0/In2] [get_bd_pins xlconcat_0/In3] [get_bd_pins xlconcat_0/In4] [get_bd_pins xlconcat_0/In5] [get_bd_pins xlconcat_0/In6] [get_bd_pins xlconstant_1/dout]
+  connect_bd_net -net xlconstant_1_dout [get_bd_pins xlconcat_0/In2] [get_bd_pins xlconcat_0/In3] [get_bd_pins xlconcat_0/In4] [get_bd_pins xlconcat_0/In5] [get_bd_pins xlconcat_0/In6] [get_bd_pins xlconstant_1/dout]
   connect_bd_net -net xlslice_0_Dout [get_bd_pins DACs_wrapper_0/dac_a] [get_bd_pins ila_0/probe1] [get_bd_pins xlslice_0/Dout]
   connect_bd_net -net xlslice_1_Dout [get_bd_pins heartBeat_approx1Hz/Dout] [get_bd_pins xlconcat_0/In0]
+  connect_bd_net -net xlslice_1_Dout1 [get_bd_pins DACs_wrapper_0/dac_b] [get_bd_pins ila_0/probe2] [get_bd_pins xlslice_1/Dout]
 
   # Create address segments
   create_bd_addr_seg -range 0x20000000 -offset 0x00000000 [get_bd_addr_spaces axi_datamover_0/Data_MM2S] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] SEG_processing_system7_0_HP0_DDR_LOWOCM

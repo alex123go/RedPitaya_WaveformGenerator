@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
---Date        : Thu Jun 11 14:22:21 2020
+--Date        : Thu Jun 11 20:36:24 2020
 --Host        : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -1848,7 +1848,7 @@ entity design_1 is
     led_o : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=31,numReposBlks=23,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=16,da_board_cnt=3,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=32,numReposBlks=24,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=16,da_board_cnt=3,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -2029,8 +2029,8 @@ architecture STRUCTURE of design_1 is
     m_axi_mm2s_rlast : in STD_LOGIC;
     m_axi_mm2s_rvalid : in STD_LOGIC;
     m_axi_mm2s_rready : out STD_LOGIC;
-    m_axis_mm2s_tdata : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    m_axis_mm2s_tkeep : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axis_mm2s_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axis_mm2s_tkeep : out STD_LOGIC_VECTOR ( 3 downto 0 );
     m_axis_mm2s_tlast : out STD_LOGIC;
     m_axis_mm2s_tvalid : out STD_LOGIC;
     m_axis_mm2s_tready : in STD_LOGIC
@@ -2215,7 +2215,7 @@ architecture STRUCTURE of design_1 is
   end component design_1_DACs_wrapper_0_0;
   component design_1_xlslice_0_0 is
   port (
-    Din : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    Din : in STD_LOGIC_VECTOR ( 31 downto 0 );
     Dout : out STD_LOGIC_VECTOR ( 13 downto 0 )
   );
   end component design_1_xlslice_0_0;
@@ -2280,8 +2280,9 @@ architecture STRUCTURE of design_1 is
     trig_in_ack : out STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe1 : in STD_LOGIC_VECTOR ( 13 downto 0 );
-    probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe3 : in STD_LOGIC_VECTOR ( 71 downto 0 )
+    probe2 : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 71 downto 0 )
   );
   end component design_1_ila_0_0;
   component design_1_xlconstant_2_0 is
@@ -2313,6 +2314,12 @@ architecture STRUCTURE of design_1 is
     gpio_io_i : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component design_1_axi_gpio_3_0;
+  component design_1_xlslice_0_1 is
+  port (
+    Din : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    Dout : out STD_LOGIC_VECTOR ( 13 downto 0 )
+  );
+  end component design_1_xlslice_0_1;
   signal ADCs_wrapper_0_adc_cdcs_o : STD_LOGIC;
   signal DACs_wrapper_0_dac_clk_o : STD_LOGIC;
   signal DACs_wrapper_0_dac_dat_o : STD_LOGIC_VECTOR ( 13 downto 0 );
@@ -2349,7 +2356,7 @@ architecture STRUCTURE of design_1 is
   signal axi_datamover_0_M_AXI_MM2S_RREADY : STD_LOGIC;
   signal axi_datamover_0_M_AXI_MM2S_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_datamover_0_M_AXI_MM2S_RVALID : STD_LOGIC;
-  signal axi_datamover_0_m_axis_mm2s_tdata : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal axi_datamover_0_m_axis_mm2s_tdata : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_datamover_0_m_axis_mm2s_tvalid : STD_LOGIC;
   signal axi_datamover_0_mm2s_err : STD_LOGIC;
   signal axi_datamover_0_s_axis_mm2s_cmd_tready : STD_LOGIC;
@@ -2526,6 +2533,7 @@ architecture STRUCTURE of design_1 is
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlslice_0_Dout : STD_LOGIC_VECTOR ( 13 downto 0 );
   signal xlslice_1_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal xlslice_1_Dout1 : STD_LOGIC_VECTOR ( 13 downto 0 );
   signal NLW_ADCs_wrapper_0_adc_a_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal NLW_ADCs_wrapper_0_adc_b_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal NLW_axi_datamover_0_m_axis_mm2s_sts_tlast_UNCONNECTED : STD_LOGIC;
@@ -2533,7 +2541,7 @@ architecture STRUCTURE of design_1 is
   signal NLW_axi_datamover_0_m_axis_mm2s_tlast_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_datamover_0_m_axis_mm2s_sts_tdata_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_axi_datamover_0_m_axis_mm2s_sts_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_axi_datamover_0_m_axis_mm2s_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal NLW_axi_datamover_0_m_axis_mm2s_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_axi_gpio_0_gpio2_io_o_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_axi_smc_M00_AXI_aruser_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_axi_smc_S00_AXI_rid_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -2652,8 +2660,8 @@ DACs_wrapper_0: component design_1_DACs_wrapper_0_0
       clk => processing_system7_0_FCLK_CLK0,
       dac_a(13 downto 0) => xlslice_0_Dout(13 downto 0),
       dac_a_tvalid => axi_datamover_0_m_axis_mm2s_tvalid,
-      dac_b(13 downto 0) => B"00000000000000",
-      dac_b_tvalid => xlconstant_1_dout(0),
+      dac_b(13 downto 0) => xlslice_1_Dout1(13 downto 0),
+      dac_b_tvalid => axi_datamover_0_m_axis_mm2s_tvalid,
       dac_clk => clk_wiz_0_clk_out3,
       dac_clk_o => DACs_wrapper_0_dac_clk_o,
       dac_dat_o(13 downto 0) => DACs_wrapper_0_dac_dat_o(13 downto 0),
@@ -2699,8 +2707,8 @@ axi_datamover_0: component design_1_axi_datamover_0_0
       m_axis_mm2s_sts_tlast => NLW_axi_datamover_0_m_axis_mm2s_sts_tlast_UNCONNECTED,
       m_axis_mm2s_sts_tready => '1',
       m_axis_mm2s_sts_tvalid => NLW_axi_datamover_0_m_axis_mm2s_sts_tvalid_UNCONNECTED,
-      m_axis_mm2s_tdata(15 downto 0) => axi_datamover_0_m_axis_mm2s_tdata(15 downto 0),
-      m_axis_mm2s_tkeep(1 downto 0) => NLW_axi_datamover_0_m_axis_mm2s_tkeep_UNCONNECTED(1 downto 0),
+      m_axis_mm2s_tdata(31 downto 0) => axi_datamover_0_m_axis_mm2s_tdata(31 downto 0),
+      m_axis_mm2s_tkeep(3 downto 0) => NLW_axi_datamover_0_m_axis_mm2s_tkeep_UNCONNECTED(3 downto 0),
       m_axis_mm2s_tlast => NLW_axi_datamover_0_m_axis_mm2s_tlast_UNCONNECTED,
       m_axis_mm2s_tready => xlconstant_0_dout(0),
       m_axis_mm2s_tvalid => axi_datamover_0_m_axis_mm2s_tvalid,
@@ -2865,8 +2873,9 @@ ila_0: component design_1_ila_0_0
       clk => processing_system7_0_FCLK_CLK0,
       probe0(0) => WaveformGen_ctrl_0_s_axis_mm2s_cmd_tvalid,
       probe1(13 downto 0) => xlslice_0_Dout(13 downto 0),
-      probe2(0) => axi_datamover_0_m_axis_mm2s_tvalid,
-      probe3(71 downto 0) => WaveformGen_ctrl_0_s_axis_mm2s_cmd_tdata(71 downto 0),
+      probe2(13 downto 0) => xlslice_1_Dout1(13 downto 0),
+      probe3(0) => axi_datamover_0_m_axis_mm2s_tvalid,
+      probe4(71 downto 0) => WaveformGen_ctrl_0_s_axis_mm2s_cmd_tdata(71 downto 0),
       trig_in => WaveformGen_ctrl_0_s_axis_mm2s_cmd_tvalid,
       trig_in_ack => NLW_ila_0_trig_in_ack_UNCONNECTED
     );
@@ -3220,7 +3229,12 @@ xlconstant_1: component design_1_xlconstant_1_0
     );
 xlslice_0: component design_1_xlslice_0_0
      port map (
-      Din(15 downto 0) => axi_datamover_0_m_axis_mm2s_tdata(15 downto 0),
+      Din(31 downto 0) => axi_datamover_0_m_axis_mm2s_tdata(31 downto 0),
       Dout(13 downto 0) => xlslice_0_Dout(13 downto 0)
+    );
+xlslice_1: component design_1_xlslice_0_1
+     port map (
+      Din(31 downto 0) => axi_datamover_0_m_axis_mm2s_tdata(31 downto 0),
+      Dout(13 downto 0) => xlslice_1_Dout1(13 downto 0)
     );
 end STRUCTURE;
