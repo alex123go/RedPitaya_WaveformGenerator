@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Jun 11 20:40:45 2020
-# Process ID: 3608
+# Start of session at: Mon Jun 15 22:44:09 2020
+# Process ID: 19548
 # Current directory: D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/design_1_wrapper.vds
@@ -23,41 +23,43 @@ If this directory should no longer be in your list of user repositories, go to t
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programs/Vivado/2019.1/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.cache/ip 
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 336.234 ; gain = 36.043
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 333.988 ; gain = 43.094
 Command: synth_design -top design_1_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1604 
+INFO: Helper process launched with PID 12500 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 765.492 ; gain = 177.363
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 765.301 ; gain = 177.332
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:61]
 INFO: [Synth 8-3491] module 'design_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1805' bound to instance 'design_1_i' of component 'design_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:109]
 INFO: [Synth 8-638] synthesizing module 'design_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1856]
-INFO: [Synth 8-3491] module 'design_1_ADCs_wrapper_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_ADCs_wrapper_0_0_stub.vhdl:5' bound to instance 'ADCs_wrapper_0' of component 'design_1_ADCs_wrapper_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2649]
-INFO: [Synth 8-638] synthesizing module 'design_1_ADCs_wrapper_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_ADCs_wrapper_0_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'design_1_DACs_wrapper_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_DACs_wrapper_0_0_stub.vhdl:5' bound to instance 'DACs_wrapper_0' of component 'design_1_DACs_wrapper_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2658]
-INFO: [Synth 8-638] synthesizing module 'design_1_DACs_wrapper_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_DACs_wrapper_0_0_stub.vhdl:23]
-INFO: [Synth 8-3491] module 'design_1_WaveformGen_ctrl_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_WaveformGen_ctrl_0_0_stub.vhdl:5' bound to instance 'WaveformGen_ctrl_0' of component 'design_1_WaveformGen_ctrl_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2673]
-INFO: [Synth 8-638] synthesizing module 'design_1_WaveformGen_ctrl_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_WaveformGen_ctrl_0_0_stub.vhdl:19]
-INFO: [Synth 8-3491] module 'design_1_axi_datamover_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_axi_datamover_0_0_stub.vhdl:5' bound to instance 'axi_datamover_0' of component 'design_1_axi_datamover_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2684]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_datamover_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_axi_datamover_0_0_stub.vhdl:44]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2720]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_0_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_1_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_1_0_stub.vhdl:5' bound to instance 'axi_gpio_1' of component 'design_1_axi_gpio_1_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2744]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_1_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_1_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_2_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_2_1_stub.vhdl:5' bound to instance 'axi_gpio_2' of component 'design_1_axi_gpio_2_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2768]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_2_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_2_1_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_3_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_3_0_stub.vhdl:5' bound to instance 'axi_gpio_firmwareVersion' of component 'design_1_axi_gpio_3_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2791]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_3_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_3_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_axi_smc_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_axi_smc_0_stub.vhdl:5' bound to instance 'axi_smc' of component 'design_1_axi_smc_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2814]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_smc_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_axi_smc_0_stub.vhdl:47]
-INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2853]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_clk_wiz_0_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'design_1_xlconstant_2_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_2_0/synth/design_1_xlconstant_2_0.v:57' bound to instance 'firmwareVersion' of component 'design_1_xlconstant_2_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2862]
+INFO: [Synth 8-3491] module 'design_1_ADCs_wrapper_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_ADCs_wrapper_0_0_stub.vhdl:5' bound to instance 'ADCs_wrapper_0' of component 'design_1_ADCs_wrapper_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2674]
+INFO: [Synth 8-638] synthesizing module 'design_1_ADCs_wrapper_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_ADCs_wrapper_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'design_1_DACs_wrapper_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_DACs_wrapper_0_0_stub.vhdl:5' bound to instance 'DACs_wrapper_0' of component 'design_1_DACs_wrapper_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2683]
+INFO: [Synth 8-638] synthesizing module 'design_1_DACs_wrapper_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_DACs_wrapper_0_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'design_1_WaveformGen_ctrl_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_WaveformGen_ctrl_0_0_stub.vhdl:5' bound to instance 'WaveformGen_ctrl_0' of component 'design_1_WaveformGen_ctrl_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2698]
+INFO: [Synth 8-638] synthesizing module 'design_1_WaveformGen_ctrl_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_WaveformGen_ctrl_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'design_1_axi_datamover_1_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_axi_datamover_1_0_stub.vhdl:5' bound to instance 'axi_datamover_1' of component 'design_1_axi_datamover_1_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2709]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_datamover_1_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_axi_datamover_1_0_stub.vhdl:44]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2745]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_0_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_1_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_1_0_stub.vhdl:5' bound to instance 'axi_gpio_1' of component 'design_1_axi_gpio_1_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2769]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_1_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_1_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_2_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_2_1_stub.vhdl:5' bound to instance 'axi_gpio_2' of component 'design_1_axi_gpio_2_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2793]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_2_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_2_1_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_3_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_3_0_stub.vhdl:5' bound to instance 'axi_gpio_firmwareVersion' of component 'design_1_axi_gpio_3_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2816]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_3_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_3_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_axi_smc_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_axi_smc_0_stub.vhdl:5' bound to instance 'axi_smc' of component 'design_1_axi_smc_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2839]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_smc_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_axi_smc_0_stub.vhdl:47]
+INFO: [Synth 8-3491] module 'design_1_axis_data_fifo_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_axis_data_fifo_0_0_stub.vhdl:5' bound to instance 'axis_data_fifo_0' of component 'design_1_axis_data_fifo_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2878]
+INFO: [Synth 8-638] synthesizing module 'design_1_axis_data_fifo_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_axis_data_fifo_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2890]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_clk_wiz_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_2_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_2_0/synth/design_1_xlconstant_2_0.v:57' bound to instance 'firmwareVersion' of component 'design_1_xlconstant_2_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2899]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_2_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_2_0/synth/design_1_xlconstant_2_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant' [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 229376002 - type: integer 
@@ -65,8 +67,8 @@ INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant' [d:/User
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant' (1#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_2_0' (2#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_2_0/synth/design_1_xlconstant_2_0.v:57]
 INFO: [Synth 8-638] synthesizing module 'heartBeat_approx1Hz_imp_1CW07NE' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:21]
-INFO: [Synth 8-3491] module 'design_1_c_counter_binary_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_c_counter_binary_0_0_stub.vhdl:5' bound to instance 'c_counter_binary_0' of component 'design_1_c_counter_binary_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:40]
-INFO: [Synth 8-638] synthesizing module 'design_1_c_counter_binary_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_c_counter_binary_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'design_1_c_counter_binary_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_c_counter_binary_0_0_stub.vhdl:5' bound to instance 'c_counter_binary_0' of component 'design_1_c_counter_binary_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'design_1_c_counter_binary_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_c_counter_binary_0_0_stub.vhdl:13]
 INFO: [Synth 8-3491] module 'design_1_xlslice_1_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_1_0/synth/design_1_xlslice_1_0.v:57' bound to instance 'xlslice_1' of component 'design_1_xlslice_1_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:45]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_1_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_1_0/synth/design_1_xlslice_1_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
@@ -76,10 +78,10 @@ INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [d:/Users/Alex
 INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (3#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_1_0' (4#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_1_0/synth/design_1_xlslice_1_0.v:57]
 INFO: [Synth 8-256] done synthesizing module 'heartBeat_approx1Hz_imp_1CW07NE' (5#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:21]
-INFO: [Synth 8-3491] module 'design_1_ila_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_ila_0_0_stub.vhdl:5' bound to instance 'ila_0' of component 'design_1_ila_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2871]
-INFO: [Synth 8-638] synthesizing module 'design_1_ila_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_ila_0_0_stub.vhdl:19]
-INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2882]
-INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_processing_system7_0_0_stub.vhdl:138]
+INFO: [Synth 8-3491] module 'design_1_ila_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_ila_0_0_stub.vhdl:5' bound to instance 'ila_0' of component 'design_1_ila_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2908]
+INFO: [Synth 8-638] synthesizing module 'design_1_ila_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_ila_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2919]
+INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_processing_system7_0_0_stub.vhdl:138]
 INFO: [Synth 8-638] synthesizing module 'design_1_ps7_0_axi_periph_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1018]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_15SPJYW' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:98]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_15SPJYW' (6#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:98]
@@ -92,17 +94,19 @@ INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_YFYJ3U' (9#1) [D:
 INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_17KQ732' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:502]
 INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_17KQ732' (10#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:502]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_UYSKKA' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:626]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:809]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:809]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_auto_pc_0_stub.vhdl:70]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_UYSKKA' (11#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:626]
-INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1689]
-INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1689]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_xbar_0_stub.vhdl:51]
 INFO: [Synth 8-256] done synthesizing module 'design_1_ps7_0_axi_periph_0' (12#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1018]
-INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_50M_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'design_1_rst_ps7_0_50M_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:3152]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_50M_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_xadc_wiz_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_xadc_wiz_0_0_stub.vhdl:5' bound to instance 'xadc_wiz_0' of component 'design_1_xadc_wiz_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:3165]
-INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-3608-DESKTOP-AUBSA4O/realtime/design_1_xadc_wiz_0_0_stub.vhdl:53]
-INFO: [Synth 8-3491] module 'design_1_xlconcat_0_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58' bound to instance 'xlconcat_0' of component 'design_1_xlconcat_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:3210]
+INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_50M_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'design_1_rst_ps7_0_50M_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:3189]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_50M_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_tvalid_trigger_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_tvalid_trigger_0_0_stub.vhdl:5' bound to instance 'tvalid_trigger_0' of component 'design_1_tvalid_trigger_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:3202]
+INFO: [Synth 8-638] synthesizing module 'design_1_tvalid_trigger_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_tvalid_trigger_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_xadc_wiz_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_xadc_wiz_0_0_stub.vhdl:5' bound to instance 'xadc_wiz_0' of component 'design_1_xadc_wiz_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:3209]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/.Xil/Vivado-19548-DESKTOP-AUBSA4O/realtime/design_1_xadc_wiz_0_0_stub.vhdl:53]
+INFO: [Synth 8-3491] module 'design_1_xlconcat_0_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58' bound to instance 'xlconcat_0' of component 'design_1_xlconcat_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:3254]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_3_xlconcat' [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
@@ -141,21 +145,21 @@ INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_3_xlconcat' [d:/Users/Al
 	Parameter NUM_PORTS bound to: 8 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_3_xlconcat' (13#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (14#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58]
-INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:3222]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:3266]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized0' [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 1 - type: integer 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized0' (14#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_0' (15#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
-INFO: [Synth 8-3491] module 'design_1_xlconstant_1_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/synth/design_1_xlconstant_1_0.v:57' bound to instance 'xlconstant_1' of component 'design_1_xlconstant_1_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:3226]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_1_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/synth/design_1_xlconstant_1_0.v:57' bound to instance 'xlconstant_1' of component 'design_1_xlconstant_1_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:3270]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_1_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/synth/design_1_xlconstant_1_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized1' [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 0 - type: integer 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized1' (15#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_1_0' (16#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/synth/design_1_xlconstant_1_0.v:57]
-INFO: [Synth 8-3491] module 'design_1_xlslice_0_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57' bound to instance 'xlslice_0' of component 'design_1_xlslice_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:3230]
+INFO: [Synth 8-3491] module 'design_1_xlslice_0_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57' bound to instance 'xlslice_0' of component 'design_1_xlslice_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:3274]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 32 - type: integer 
@@ -163,7 +167,7 @@ INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0
 	Parameter DIN_TO bound to: 2 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (16#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_0' (17#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
-INFO: [Synth 8-3491] module 'design_1_xlslice_0_1' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57' bound to instance 'xlslice_1' of component 'design_1_xlslice_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:3235]
+INFO: [Synth 8-3491] module 'design_1_xlslice_0_1' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57' bound to instance 'xlslice_1' of component 'design_1_xlslice_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:3279]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_1' [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 32 - type: integer 
@@ -275,7 +279,7 @@ WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice has unconnected port Din[2
 WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice has unconnected port Din[20]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 838.492 ; gain = 250.363
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 838.730 ; gain = 250.762
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -288,10 +292,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 838.492 ; gain = 250.363
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 838.730 ; gain = 250.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 838.492 ; gain = 250.363
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 838.730 ; gain = 250.762
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -299,8 +303,6 @@ Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'design_1_i/processing_system7_0'
 Finished Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'design_1_i/processing_system7_0'
-Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_in_context.xdc] for cell 'design_1_i/axi_datamover_0'
-Finished Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_in_context.xdc] for cell 'design_1_i/axi_datamover_0'
 Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_50M'
 Finished Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_50M'
 Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc] for cell 'design_1_i/clk_wiz_0'
@@ -329,6 +331,12 @@ Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/pro
 Finished Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0/design_1_ila_0_0_in_context.xdc] for cell 'design_1_i/ila_0'
 Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_3_0/design_1_axi_gpio_3_0/design_1_axi_gpio_3_0_in_context.xdc] for cell 'design_1_i/axi_gpio_firmwareVersion'
 Finished Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_3_0/design_1_axi_gpio_3_0/design_1_axi_gpio_3_0_in_context.xdc] for cell 'design_1_i/axi_gpio_firmwareVersion'
+Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0_in_context.xdc] for cell 'design_1_i/axis_data_fifo_0'
+Finished Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0_in_context.xdc] for cell 'design_1_i/axis_data_fifo_0'
+Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_tvalid_trigger_0_0/design_1_tvalid_trigger_0_0/design_1_tvalid_trigger_0_0_in_context.xdc] for cell 'design_1_i/tvalid_trigger_0'
+Finished Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_tvalid_trigger_0_0/design_1_tvalid_trigger_0_0/design_1_tvalid_trigger_0_0_in_context.xdc] for cell 'design_1_i/tvalid_trigger_0'
+Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_datamover_1_0/design_1_axi_datamover_1_0/design_1_axi_datamover_1_0_in_context.xdc] for cell 'design_1_i/axi_datamover_1'
+Finished Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_datamover_1_0/design_1_axi_datamover_1_0/design_1_axi_datamover_1_0_in_context.xdc] for cell 'design_1_i/axi_datamover_1'
 Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/constrs_1/new/red_pitaya_constraint.xdc]
@@ -339,26 +347,27 @@ Parsing XDC File [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/pro
 Finished Parsing XDC File [D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 926.887 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 939.691 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 926.887 ; gain = 0.000
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_datamover_0' at clock pin 'm_axi_mm2s_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 939.691 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_datamover_1' at clock pin 'm_axi_mm2s_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_0' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_1' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_2' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_firmwareVersion' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '8.000' specified during out-of-context synthesis of instance 'design_1_i/axi_smc' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/xadc_wiz_0' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 928.883 ; gain = 340.754
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 941.691 ; gain = 353.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 928.883 ; gain = 340.754
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 941.691 ; gain = 353.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -629,7 +638,6 @@ Applied set_property IO_BUFFER_TYPE = NONE for adc_clk_p_i. (constraint file  d:
 Applied set_property CLOCK_BUFFER_TYPE = NONE for adc_clk_p_i. (constraint file  d:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc, line 8).
 Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/axi_datamover_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/rst_ps7_0_50M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/clk_wiz_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_smc. (constraint file  auto generated constraint, line ).
@@ -652,12 +660,15 @@ Applied set_property DONT_TOUCH = true for design_1_i/ila_0. (constraint file  a
 Applied set_property DONT_TOUCH = true for design_1_i/firmwareVersion. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_gpio_firmwareVersion. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/xlslice_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axis_data_fifo_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/tvalid_trigger_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_datamover_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 928.883 ; gain = 340.754
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 941.691 ; gain = 353.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 928.883 ; gain = 340.754
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 941.691 ; gain = 353.723
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -693,7 +704,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 928.883 ; gain = 340.754
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 941.691 ; gain = 353.723
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -709,13 +720,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_0/clk_
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_0/clk_out3' to pin 'design_1_i/clk_wiz_0/bbstub_clk_out3/O'
 INFO: [Synth 8-5819] Moved 3 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 928.883 ; gain = 340.754
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 941.691 ; gain = 353.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 928.883 ; gain = 340.754
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 941.691 ; gain = 353.723
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -727,7 +738,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 928.883 ; gain = 340.754
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 941.691 ; gain = 353.723
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -751,7 +762,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 938.070 ; gain = 349.941
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 945.137 ; gain = 357.168
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -764,7 +775,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 938.070 ; gain = 349.941
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 945.137 ; gain = 357.168
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -776,25 +787,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 938.070 ; gain = 349.941
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 945.137 ; gain = 357.168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 938.070 ; gain = 349.941
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 945.137 ; gain = 357.168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 938.070 ; gain = 349.941
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 945.137 ; gain = 357.168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 938.070 ; gain = 349.941
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 945.137 ; gain = 357.168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -809,18 +820,20 @@ Report BlackBoxes:
 |3     |design_1_ADCs_wrapper_0_0       |         1|
 |4     |design_1_DACs_wrapper_0_0       |         1|
 |5     |design_1_WaveformGen_ctrl_0_0   |         1|
-|6     |design_1_axi_datamover_0_0      |         1|
+|6     |design_1_axi_datamover_1_0      |         1|
 |7     |design_1_axi_gpio_0_0           |         1|
 |8     |design_1_axi_gpio_1_0           |         1|
 |9     |design_1_axi_gpio_2_1           |         1|
 |10    |design_1_axi_gpio_3_0           |         1|
 |11    |design_1_axi_smc_0              |         1|
-|12    |design_1_clk_wiz_0_0            |         1|
-|13    |design_1_ila_0_0                |         1|
-|14    |design_1_processing_system7_0_0 |         1|
-|15    |design_1_rst_ps7_0_50M_0        |         1|
-|16    |design_1_xadc_wiz_0_0           |         1|
-|17    |design_1_c_counter_binary_0_0   |         1|
+|12    |design_1_axis_data_fifo_0_0     |         1|
+|13    |design_1_clk_wiz_0_0            |         1|
+|14    |design_1_ila_0_0                |         1|
+|15    |design_1_processing_system7_0_0 |         1|
+|16    |design_1_rst_ps7_0_50M_0        |         1|
+|17    |design_1_tvalid_trigger_0_0     |         1|
+|18    |design_1_xadc_wiz_0_0           |         1|
+|19    |design_1_c_counter_binary_0_0   |         1|
 +------+--------------------------------+----------+
 
 Report Cell Usage: 
@@ -830,30 +843,32 @@ Report Cell Usage:
 |1     |design_1_ADCs_wrapper_0_0_bbox_0        |     1|
 |2     |design_1_DACs_wrapper_0_0_bbox_1        |     1|
 |3     |design_1_WaveformGen_ctrl_0_0_bbox_2    |     1|
-|4     |design_1_auto_pc_0_bbox_13              |     1|
-|5     |design_1_axi_datamover_0_0_bbox_3       |     1|
+|4     |design_1_auto_pc_0_bbox_14              |     1|
+|5     |design_1_axi_datamover_1_0_bbox_3       |     1|
 |6     |design_1_axi_gpio_0_0_bbox_4            |     1|
 |7     |design_1_axi_gpio_1_0_bbox_5            |     1|
 |8     |design_1_axi_gpio_2_1_bbox_6            |     1|
 |9     |design_1_axi_gpio_3_0_bbox_7            |     1|
 |10    |design_1_axi_smc_0_bbox_8               |     1|
-|11    |design_1_c_counter_binary_0_0_bbox_10   |     1|
-|12    |design_1_clk_wiz_0_0_bbox_9             |     1|
-|13    |design_1_ila_0_0_bbox_11                |     1|
-|14    |design_1_processing_system7_0_0_bbox_12 |     1|
-|15    |design_1_rst_ps7_0_50M_0_bbox_15        |     1|
-|16    |design_1_xadc_wiz_0_0_bbox_16           |     1|
-|17    |design_1_xbar_0_bbox_14                 |     1|
-|18    |IBUF                                    |    38|
-|19    |OBUF                                    |    27|
+|11    |design_1_axis_data_fifo_0_0_bbox_9      |     1|
+|12    |design_1_c_counter_binary_0_0_bbox_11   |     1|
+|13    |design_1_clk_wiz_0_0_bbox_10            |     1|
+|14    |design_1_ila_0_0_bbox_12                |     1|
+|15    |design_1_processing_system7_0_0_bbox_13 |     1|
+|16    |design_1_rst_ps7_0_50M_0_bbox_16        |     1|
+|17    |design_1_tvalid_trigger_0_0_bbox_17     |     1|
+|18    |design_1_xadc_wiz_0_0_bbox_18           |     1|
+|19    |design_1_xbar_0_bbox_15                 |     1|
+|20    |IBUF                                    |    38|
+|21    |OBUF                                    |    27|
 +------+----------------------------------------+------+
 
 Report Instance Areas: 
 +------+------------------------+--------------------------------+------+
 |      |Instance                |Module                          |Cells |
 +------+------------------------+--------------------------------+------+
-|1     |top                     |                                |  1933|
-|2     |  design_1_i            |design_1                        |  1868|
+|1     |top                     |                                |  1968|
+|2     |  design_1_i            |design_1                        |  1903|
 |3     |    firmwareVersion     |design_1_xlconstant_2_0         |     0|
 |4     |    ps7_0_axi_periph    |design_1_ps7_0_axi_periph_0     |   773|
 |5     |      s00_couplers      |s00_couplers_imp_UYSKKA         |   177|
@@ -866,25 +881,25 @@ Report Instance Areas:
 |12    |      xlslice_1         |design_1_xlslice_1_0            |     0|
 +------+------------------------+--------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 938.070 ; gain = 349.941
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 945.137 ; gain = 357.168
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 74 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 938.070 ; gain = 259.551
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 938.070 ; gain = 349.941
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 945.137 ; gain = 254.207
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 945.137 ; gain = 357.168
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 956.902 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 964.152 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-107 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
+111 Infos, 113 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 956.902 ; gain = 620.668
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 956.902 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:56 . Memory (MB): peak = 964.152 ; gain = 630.164
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 964.152 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jun 11 20:42:01 2020...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 15 22:45:19 2020...

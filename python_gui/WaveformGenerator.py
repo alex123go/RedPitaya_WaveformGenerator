@@ -41,11 +41,23 @@ class WaveformGenerator(QtWidgets.QMainWindow):
 		self.dev = dev
 		self.initUI()
 
+		# ZynqTempInDegC = 0
+		# self.label_RP_Temp.setText('Zynq temperature (max 85 °C operating): %.2f °C' % ZynqTempInDegC)
+		
+		# self.timerTemperature = Qt.QTimer(self)
+		# self.timerTemperature.timeout.connect(self.timerTemperatureUpdate)
+		# self.timerTemperature.start(1000)
+
 		# if reprogram == True:
 		# 	self.pushValues()
 		# else:
 		# 	self.getValues()
 
+
+	# def timerTemperatureUpdate(self):
+	# 	print('Updating temp')
+	# 	ZynqTempInDegC = self.readZynqTemperature()
+	# 	self.label_RP_Temp.setText('Zynq temperature (max 85 °C operating): %.2f °C' % ZynqTempInDegC)
 
 
 
@@ -98,6 +110,7 @@ class WaveformGenerator(QtWidgets.QMainWindow):
 
 
 	def startWFG(self):
+		print('Start')
 		self.dev.write_Zynq_AXI_register_uint32(self.CONTINUOUS_REG, 1)
 
 
@@ -115,25 +128,46 @@ class WaveformGenerator(QtWidgets.QMainWindow):
 
 	def sendWave(self):
 		try:
-			self.dev.write_file_on_remote(strFilenameLocal=self.lineEdit_file.text(), strFilenameRemote='/opt/data.dat')
-		except OSError as e:
+			try:
+				file = self.lineEdit_file.text()
+				with open(file,'rb') as fb:
+					data_in_bin = fb.read()    			
+			except OSError as e:
+				print(e)
+
+			sizeInBytes = len(data_in_bin)
+			self.nptsInFile = int(sizeInBytes/4) # 4 bytes per points (because 2 DACs)
+
+			# write n_pts to lineEdit + send to FPGA
+			self.lineEdit_nPts.blockSignals(True)
+			self.lineEdit_nPts.setText(str(int(sizeInBytes/4))) # 4 bytes per points
+			self.lineEdit_nPts.blockSignals(False)
+			self.sendNumberOfPoints()
+
+			# send file to ddr3
+			self.dev.write_Zynq_ddr(0, data_in_bin)
+		except Exception as e:
 			print(e)
-		self.loadWave()
-
-	def loadWave(self):
-		# find file size
-		sizeInBytes = os.path.getsize(self.lineEdit_file.text())
-		# self.nptsInFile = int(sizeInBytes/2)
-		self.nptsInFile = int(sizeInBytes/4) # 4 bytes per points
-
-		# write n_pts to lineEdit + send to FPGA
-		self.lineEdit_nPts.blockSignals(True)
-		# self.lineEdit_nPts.setText(str(int(sizeInBytes/2)))
-		self.lineEdit_nPts.setText(str(int(sizeInBytes/4))) # 4 bytes per points
-		self.lineEdit_nPts.blockSignals(False)
-
-		self.sendNumberOfPoints()
-
-		# load file in
-		self.dev.write_file_to_ddr()
 		
+
+	# (from jddes' DPLL software):
+	# read the Zynq's current temperature
+	# def readZynqTemperature(self):
+	# 	###########################################################################
+	# 	# Reading the XADC values:
+	# 	# See Xilinx document UG480 chapter 2 for conversion factors
+	# 	# we use 2**16 instead of 2**12 for the denominator because the codes are "MSB-aligned" in the register (equivalent to a multiplication by 2**4)
+	# 	xadc_temperature_code_to_degC    = lambda x: x*503.975/2.**16-273.15
+	# 	# time_start = time.process_time()
+	# 	# average 10 readings because otherwise they are quite noisy:
+	# 	# this reading loop takes just 2 ms for 10 readings at the moment so there is no real cost
+	# 	N_average = 10.
+	# 	reg_avg = 0.
+	# 	for k in range(int(N_average)):
+	# 		reg = self.dev.read_Zynq_AXI_register_uint32(self.xadc_base_addr+0x200)
+	# 		reg_avg += float(reg)
+			
+	# 	reg_avg = float(reg_avg)/N_average
+	# 	# print("elapsed = %f" % (time.process_time()-time_start))
+	# 	ZynqTempInDegC = xadc_temperature_code_to_degC(  reg_avg  )
+	# 	return ZynqTempInDegC

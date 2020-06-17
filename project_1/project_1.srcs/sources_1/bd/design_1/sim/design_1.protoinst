@@ -3,7 +3,7 @@
 	"modules": {
 		"design_1": {
 			"proto_instances": {
-				"/axi_datamover_0/M_AXI_MM2S": {
+				"/axi_datamover_1/M_AXI_MM2S": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "m_axi_mm2s_aclk"},

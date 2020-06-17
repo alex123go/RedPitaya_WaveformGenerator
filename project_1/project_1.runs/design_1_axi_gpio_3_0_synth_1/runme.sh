@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/RedPitaya_WaveformGenerator/project_1/project_1.runs/design_1_axi_gpio_3_0_synth_1'
+HD_PWD='D:/Users/Alex/Documents/GitHub/RedPitaya_WaveformGenerator/project_1/project_1.runs/design_1_axi_gpio_3_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

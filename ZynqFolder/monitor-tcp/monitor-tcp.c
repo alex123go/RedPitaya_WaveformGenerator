@@ -982,7 +982,7 @@ static int handleConnection(int connfd) {
 				        		struct binary_packet_read_ddr_t * pPacketReadDDR;
 				        		pPacketReadDDR = (binary_packet_read_ddr_t*) message_buff;
 				        		printf("Received a DDR read packet.\n");
-				        		printf("Start_address (not yet active) = 0x%X (hex)\n", pPacketReadDDR->start_address);
+				        		printf("Start_address   = 0x%X (hex)\n", pPacketReadDDR->start_address);
 				        		printf("Number_of_bytes = %u (decimal)\n", pPacketReadDDR->number_of_bytes);
 				        		fflush(stdout);
 
@@ -990,7 +990,7 @@ static int handleConnection(int connfd) {
 				        		clock_gettime(CLOCK_REALTIME, &time_start);
 
 				        		// TODO: add offset to map_base_dma
-				        		send(connfd, map_base_dma, pPacketReadDDR->number_of_bytes, 0);
+				        		send(connfd, ((char*)map_base_dma + (pPacketReadDDR->start_address*sizeof(char) )), pPacketReadDDR->number_of_bytes, 0);
 
 				        		clock_gettime(CLOCK_REALTIME, &time_end);
 					    		printf("getdata elapsed = %d seconds + %ld ns\n", (int)(time_end.tv_sec-time_start.tv_sec), (long int)(time_end.tv_nsec-time_start.tv_nsec));
@@ -1019,8 +1019,8 @@ static int handleConnection(int connfd) {
 		        				bHaveWriteDDRHeader = true;
 				        		pPacketWriteDDR = (binary_packet_write_ddr_t*) message_buff;
 
-				        		printf("Received a DDR write packet (don't work yet ... seems to be 32 bits vs 16 bits problem in comms.\n");
-				        		printf("Start_address (not yet active) = 0x%X (hex)\n", pPacketWriteDDR->start_address);
+				        		printf("Received a DDR write packet.\n");
+				        		printf("Start_address  = 0x%X (hex)\n", pPacketWriteDDR->start_address);
 				        		printf("Number_of_bytes                = %u (decimal)\n", pPacketWriteDDR->number_of_bytes);
 
 				        		iRequiredBytes = sizeof(binary_packet_write_ddr_t) + pPacketWriteDDR->number_of_bytes;
@@ -1037,7 +1037,7 @@ static int handleConnection(int connfd) {
 		        				printf("msg_end = %u, iRequiredBytes = %u\n", msg_end, iRequiredBytes);
 		        				
 		        				// copy message_buff to ddr3
-		        				memcpy(map_base_dma, (void*)(message_buff+sizeof(binary_packet_write_ddr_t)) , pPacketWriteDDR->number_of_bytes);
+		        				memcpy(((char*)map_base_dma + pPacketWriteDDR->start_address*sizeof(char)), (void*)(message_buff+sizeof(binary_packet_write_ddr_t)) , pPacketWriteDDR->number_of_bytes);
 
 		        				// reset our message parsing state variables
 				        		bHaveWriteDDRHeader = false;

@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
---Date        : Thu Jun 11 20:36:24 2020
+--Date        : Mon Jun 15 22:36:29 2020
 --Host        : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -1848,7 +1848,7 @@ entity design_1 is
     led_o : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=32,numReposBlks=24,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=16,da_board_cnt=3,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=34,numReposBlks=26,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=16,da_board_cnt=3,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -1999,43 +1999,6 @@ architecture STRUCTURE of design_1 is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_rst_ps7_0_50M_0;
-  component design_1_axi_datamover_0_0 is
-  port (
-    m_axi_mm2s_aclk : in STD_LOGIC;
-    m_axi_mm2s_aresetn : in STD_LOGIC;
-    mm2s_err : out STD_LOGIC;
-    m_axis_mm2s_cmdsts_aclk : in STD_LOGIC;
-    m_axis_mm2s_cmdsts_aresetn : in STD_LOGIC;
-    s_axis_mm2s_cmd_tvalid : in STD_LOGIC;
-    s_axis_mm2s_cmd_tready : out STD_LOGIC;
-    s_axis_mm2s_cmd_tdata : in STD_LOGIC_VECTOR ( 71 downto 0 );
-    m_axis_mm2s_sts_tvalid : out STD_LOGIC;
-    m_axis_mm2s_sts_tready : in STD_LOGIC;
-    m_axis_mm2s_sts_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axis_mm2s_sts_tkeep : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axis_mm2s_sts_tlast : out STD_LOGIC;
-    m_axi_mm2s_arid : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_mm2s_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_axi_mm2s_arlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axi_mm2s_arsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axi_mm2s_arburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_mm2s_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m_axi_mm2s_arcache : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_mm2s_aruser : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_mm2s_arvalid : out STD_LOGIC;
-    m_axi_mm2s_arready : in STD_LOGIC;
-    m_axi_mm2s_rdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    m_axi_mm2s_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_mm2s_rlast : in STD_LOGIC;
-    m_axi_mm2s_rvalid : in STD_LOGIC;
-    m_axi_mm2s_rready : out STD_LOGIC;
-    m_axis_mm2s_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_axis_mm2s_tkeep : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axis_mm2s_tlast : out STD_LOGIC;
-    m_axis_mm2s_tvalid : out STD_LOGIC;
-    m_axis_mm2s_tready : in STD_LOGIC
-  );
-  end component design_1_axi_datamover_0_0;
   component design_1_clk_wiz_0_0 is
   port (
     clk_in1_p : in STD_LOGIC;
@@ -2320,6 +2283,64 @@ architecture STRUCTURE of design_1 is
     Dout : out STD_LOGIC_VECTOR ( 13 downto 0 )
   );
   end component design_1_xlslice_0_1;
+  component design_1_axis_data_fifo_0_0 is
+  port (
+    s_axis_aresetn : in STD_LOGIC;
+    s_axis_aclk : in STD_LOGIC;
+    s_axis_tvalid : in STD_LOGIC;
+    s_axis_tready : out STD_LOGIC;
+    s_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axis_aclk : in STD_LOGIC;
+    m_axis_tvalid : out STD_LOGIC;
+    m_axis_tready : in STD_LOGIC;
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 )
+  );
+  end component design_1_axis_data_fifo_0_0;
+  component design_1_tvalid_trigger_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    resetn : in STD_LOGIC;
+    sig : in STD_LOGIC;
+    output_latch : out STD_LOGIC
+  );
+  end component design_1_tvalid_trigger_0_0;
+  component design_1_axi_datamover_1_0 is
+  port (
+    m_axi_mm2s_aclk : in STD_LOGIC;
+    m_axi_mm2s_aresetn : in STD_LOGIC;
+    mm2s_err : out STD_LOGIC;
+    m_axis_mm2s_cmdsts_aclk : in STD_LOGIC;
+    m_axis_mm2s_cmdsts_aresetn : in STD_LOGIC;
+    s_axis_mm2s_cmd_tvalid : in STD_LOGIC;
+    s_axis_mm2s_cmd_tready : out STD_LOGIC;
+    s_axis_mm2s_cmd_tdata : in STD_LOGIC_VECTOR ( 71 downto 0 );
+    m_axis_mm2s_sts_tvalid : out STD_LOGIC;
+    m_axis_mm2s_sts_tready : in STD_LOGIC;
+    m_axis_mm2s_sts_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axis_mm2s_sts_tkeep : out STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axis_mm2s_sts_tlast : out STD_LOGIC;
+    m_axi_mm2s_arid : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_mm2s_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_mm2s_arlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axi_mm2s_arsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_mm2s_arburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_mm2s_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_mm2s_arcache : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_mm2s_aruser : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_mm2s_arvalid : out STD_LOGIC;
+    m_axi_mm2s_arready : in STD_LOGIC;
+    m_axi_mm2s_rdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axi_mm2s_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_mm2s_rlast : in STD_LOGIC;
+    m_axi_mm2s_rvalid : in STD_LOGIC;
+    m_axi_mm2s_rready : out STD_LOGIC;
+    m_axis_mm2s_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axis_mm2s_tkeep : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axis_mm2s_tlast : out STD_LOGIC;
+    m_axis_mm2s_tvalid : out STD_LOGIC;
+    m_axis_mm2s_tready : in STD_LOGIC
+  );
+  end component design_1_axi_datamover_1_0;
   signal ADCs_wrapper_0_adc_cdcs_o : STD_LOGIC;
   signal DACs_wrapper_0_dac_clk_o : STD_LOGIC;
   signal DACs_wrapper_0_dac_dat_o : STD_LOGIC_VECTOR ( 13 downto 0 );
@@ -2327,6 +2348,7 @@ architecture STRUCTURE of design_1 is
   signal DACs_wrapper_0_dac_sel_o : STD_LOGIC;
   signal DACs_wrapper_0_dac_wrt_o : STD_LOGIC;
   signal Net : STD_LOGIC;
+  signal Net1 : STD_LOGIC;
   signal Vaux0_0_1_V_N : STD_LOGIC;
   signal Vaux0_0_1_V_P : STD_LOGIC;
   signal Vaux1_0_1_V_N : STD_LOGIC;
@@ -2341,25 +2363,27 @@ architecture STRUCTURE of design_1 is
   signal WaveformGen_ctrl_0_s_axis_mm2s_cmd_tvalid : STD_LOGIC;
   signal adc_clk_n_i_1 : STD_LOGIC;
   signal adc_clk_p_i_1 : STD_LOGIC;
-  signal axi_datamover_0_M_AXI_MM2S_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal axi_datamover_0_M_AXI_MM2S_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal axi_datamover_0_M_AXI_MM2S_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal axi_datamover_0_M_AXI_MM2S_ARID : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal axi_datamover_0_M_AXI_MM2S_ARLEN : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal axi_datamover_0_M_AXI_MM2S_ARPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal axi_datamover_0_M_AXI_MM2S_ARREADY : STD_LOGIC;
-  signal axi_datamover_0_M_AXI_MM2S_ARSIZE : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal axi_datamover_0_M_AXI_MM2S_ARUSER : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal axi_datamover_0_M_AXI_MM2S_ARVALID : STD_LOGIC;
-  signal axi_datamover_0_M_AXI_MM2S_RDATA : STD_LOGIC_VECTOR ( 63 downto 0 );
-  signal axi_datamover_0_M_AXI_MM2S_RLAST : STD_LOGIC;
-  signal axi_datamover_0_M_AXI_MM2S_RREADY : STD_LOGIC;
-  signal axi_datamover_0_M_AXI_MM2S_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal axi_datamover_0_M_AXI_MM2S_RVALID : STD_LOGIC;
   signal axi_datamover_0_m_axis_mm2s_tdata : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_datamover_0_m_axis_mm2s_tvalid : STD_LOGIC;
   signal axi_datamover_0_mm2s_err : STD_LOGIC;
-  signal axi_datamover_0_s_axis_mm2s_cmd_tready : STD_LOGIC;
+  signal axi_datamover_1_M_AXI_MM2S_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal axi_datamover_1_M_AXI_MM2S_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal axi_datamover_1_M_AXI_MM2S_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal axi_datamover_1_M_AXI_MM2S_ARID : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal axi_datamover_1_M_AXI_MM2S_ARLEN : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal axi_datamover_1_M_AXI_MM2S_ARPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal axi_datamover_1_M_AXI_MM2S_ARREADY : STD_LOGIC;
+  signal axi_datamover_1_M_AXI_MM2S_ARSIZE : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal axi_datamover_1_M_AXI_MM2S_ARUSER : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal axi_datamover_1_M_AXI_MM2S_ARVALID : STD_LOGIC;
+  signal axi_datamover_1_M_AXI_MM2S_RDATA : STD_LOGIC_VECTOR ( 63 downto 0 );
+  signal axi_datamover_1_M_AXI_MM2S_RLAST : STD_LOGIC;
+  signal axi_datamover_1_M_AXI_MM2S_RREADY : STD_LOGIC;
+  signal axi_datamover_1_M_AXI_MM2S_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal axi_datamover_1_M_AXI_MM2S_RVALID : STD_LOGIC;
+  signal axi_datamover_1_m_axis_mm2s_tdata : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal axi_datamover_1_m_axis_mm2s_tvalid : STD_LOGIC;
+  signal axi_datamover_1_s_axis_mm2s_cmd_tready : STD_LOGIC;
   signal axi_gpio_0_gpio_io_o : STD_LOGIC_VECTOR ( 22 downto 0 );
   signal axi_gpio_1_gpio2_io_o : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axi_gpio_1_gpio_io_o : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -2378,6 +2402,7 @@ architecture STRUCTURE of design_1 is
   signal axi_smc_M00_AXI_RREADY : STD_LOGIC;
   signal axi_smc_M00_AXI_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_smc_M00_AXI_RVALID : STD_LOGIC;
+  signal axis_data_fifo_0_s_axis_tready : STD_LOGIC;
   signal clk_wiz_0_clk_out3 : STD_LOGIC;
   signal clk_wiz_0_locked : STD_LOGIC;
   signal firmwareVersion_dout : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -2527,6 +2552,7 @@ architecture STRUCTURE of design_1 is
   signal ps7_0_axi_periph_M04_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal ps7_0_axi_periph_M04_AXI_WVALID : STD_LOGIC;
   signal rst_ps7_0_50M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal tvalid_trigger_0_output : STD_LOGIC;
   signal xadc_wiz_0_ip2intc_irpt : STD_LOGIC;
   signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -2536,16 +2562,15 @@ architecture STRUCTURE of design_1 is
   signal xlslice_1_Dout1 : STD_LOGIC_VECTOR ( 13 downto 0 );
   signal NLW_ADCs_wrapper_0_adc_a_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal NLW_ADCs_wrapper_0_adc_b_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal NLW_axi_datamover_0_m_axis_mm2s_sts_tlast_UNCONNECTED : STD_LOGIC;
-  signal NLW_axi_datamover_0_m_axis_mm2s_sts_tvalid_UNCONNECTED : STD_LOGIC;
-  signal NLW_axi_datamover_0_m_axis_mm2s_tlast_UNCONNECTED : STD_LOGIC;
-  signal NLW_axi_datamover_0_m_axis_mm2s_sts_tdata_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal NLW_axi_datamover_0_m_axis_mm2s_sts_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_axi_datamover_0_m_axis_mm2s_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_axi_datamover_1_m_axis_mm2s_sts_tlast_UNCONNECTED : STD_LOGIC;
+  signal NLW_axi_datamover_1_m_axis_mm2s_sts_tvalid_UNCONNECTED : STD_LOGIC;
+  signal NLW_axi_datamover_1_m_axis_mm2s_tlast_UNCONNECTED : STD_LOGIC;
+  signal NLW_axi_datamover_1_m_axis_mm2s_sts_tdata_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal NLW_axi_datamover_1_m_axis_mm2s_sts_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_axi_datamover_1_m_axis_mm2s_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_axi_gpio_0_gpio2_io_o_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_axi_smc_M00_AXI_aruser_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_axi_smc_S00_AXI_rid_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_clk_wiz_0_clk_out2_UNCONNECTED : STD_LOGIC;
   signal NLW_ila_0_trig_in_ack_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_SPI0_MISO_O_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_SPI0_MISO_T_UNCONNECTED : STD_LOGIC;
@@ -2676,45 +2701,45 @@ WaveformGen_ctrl_0: component design_1_WaveformGen_ctrl_0_0
       n_bytes(22 downto 0) => axi_gpio_0_gpio_io_o(22 downto 0),
       resetn => rst_ps7_0_50M_peripheral_aresetn(0),
       s_axis_mm2s_cmd_tdata(71 downto 0) => WaveformGen_ctrl_0_s_axis_mm2s_cmd_tdata(71 downto 0),
-      s_axis_mm2s_cmd_tready => axi_datamover_0_s_axis_mm2s_cmd_tready,
+      s_axis_mm2s_cmd_tready => axi_datamover_1_s_axis_mm2s_cmd_tready,
       s_axis_mm2s_cmd_tvalid => WaveformGen_ctrl_0_s_axis_mm2s_cmd_tvalid,
       start_continuous => axi_gpio_1_gpio2_io_o(0),
       start_single => axi_gpio_1_gpio_io_o(0)
     );
-axi_datamover_0: component design_1_axi_datamover_0_0
+axi_datamover_1: component design_1_axi_datamover_1_0
      port map (
-      m_axi_mm2s_aclk => processing_system7_0_FCLK_CLK0,
-      m_axi_mm2s_araddr(31 downto 0) => axi_datamover_0_M_AXI_MM2S_ARADDR(31 downto 0),
-      m_axi_mm2s_arburst(1 downto 0) => axi_datamover_0_M_AXI_MM2S_ARBURST(1 downto 0),
-      m_axi_mm2s_arcache(3 downto 0) => axi_datamover_0_M_AXI_MM2S_ARCACHE(3 downto 0),
+      m_axi_mm2s_aclk => Net1,
+      m_axi_mm2s_araddr(31 downto 0) => axi_datamover_1_M_AXI_MM2S_ARADDR(31 downto 0),
+      m_axi_mm2s_arburst(1 downto 0) => axi_datamover_1_M_AXI_MM2S_ARBURST(1 downto 0),
+      m_axi_mm2s_arcache(3 downto 0) => axi_datamover_1_M_AXI_MM2S_ARCACHE(3 downto 0),
       m_axi_mm2s_aresetn => rst_ps7_0_50M_peripheral_aresetn(0),
-      m_axi_mm2s_arid(3 downto 0) => axi_datamover_0_M_AXI_MM2S_ARID(3 downto 0),
-      m_axi_mm2s_arlen(7 downto 0) => axi_datamover_0_M_AXI_MM2S_ARLEN(7 downto 0),
-      m_axi_mm2s_arprot(2 downto 0) => axi_datamover_0_M_AXI_MM2S_ARPROT(2 downto 0),
-      m_axi_mm2s_arready => axi_datamover_0_M_AXI_MM2S_ARREADY,
-      m_axi_mm2s_arsize(2 downto 0) => axi_datamover_0_M_AXI_MM2S_ARSIZE(2 downto 0),
-      m_axi_mm2s_aruser(3 downto 0) => axi_datamover_0_M_AXI_MM2S_ARUSER(3 downto 0),
-      m_axi_mm2s_arvalid => axi_datamover_0_M_AXI_MM2S_ARVALID,
-      m_axi_mm2s_rdata(63 downto 0) => axi_datamover_0_M_AXI_MM2S_RDATA(63 downto 0),
-      m_axi_mm2s_rlast => axi_datamover_0_M_AXI_MM2S_RLAST,
-      m_axi_mm2s_rready => axi_datamover_0_M_AXI_MM2S_RREADY,
-      m_axi_mm2s_rresp(1 downto 0) => axi_datamover_0_M_AXI_MM2S_RRESP(1 downto 0),
-      m_axi_mm2s_rvalid => axi_datamover_0_M_AXI_MM2S_RVALID,
+      m_axi_mm2s_arid(3 downto 0) => axi_datamover_1_M_AXI_MM2S_ARID(3 downto 0),
+      m_axi_mm2s_arlen(7 downto 0) => axi_datamover_1_M_AXI_MM2S_ARLEN(7 downto 0),
+      m_axi_mm2s_arprot(2 downto 0) => axi_datamover_1_M_AXI_MM2S_ARPROT(2 downto 0),
+      m_axi_mm2s_arready => axi_datamover_1_M_AXI_MM2S_ARREADY,
+      m_axi_mm2s_arsize(2 downto 0) => axi_datamover_1_M_AXI_MM2S_ARSIZE(2 downto 0),
+      m_axi_mm2s_aruser(3 downto 0) => axi_datamover_1_M_AXI_MM2S_ARUSER(3 downto 0),
+      m_axi_mm2s_arvalid => axi_datamover_1_M_AXI_MM2S_ARVALID,
+      m_axi_mm2s_rdata(63 downto 0) => axi_datamover_1_M_AXI_MM2S_RDATA(63 downto 0),
+      m_axi_mm2s_rlast => axi_datamover_1_M_AXI_MM2S_RLAST,
+      m_axi_mm2s_rready => axi_datamover_1_M_AXI_MM2S_RREADY,
+      m_axi_mm2s_rresp(1 downto 0) => axi_datamover_1_M_AXI_MM2S_RRESP(1 downto 0),
+      m_axi_mm2s_rvalid => axi_datamover_1_M_AXI_MM2S_RVALID,
       m_axis_mm2s_cmdsts_aclk => processing_system7_0_FCLK_CLK0,
       m_axis_mm2s_cmdsts_aresetn => rst_ps7_0_50M_peripheral_aresetn(0),
-      m_axis_mm2s_sts_tdata(7 downto 0) => NLW_axi_datamover_0_m_axis_mm2s_sts_tdata_UNCONNECTED(7 downto 0),
-      m_axis_mm2s_sts_tkeep(0) => NLW_axi_datamover_0_m_axis_mm2s_sts_tkeep_UNCONNECTED(0),
-      m_axis_mm2s_sts_tlast => NLW_axi_datamover_0_m_axis_mm2s_sts_tlast_UNCONNECTED,
+      m_axis_mm2s_sts_tdata(7 downto 0) => NLW_axi_datamover_1_m_axis_mm2s_sts_tdata_UNCONNECTED(7 downto 0),
+      m_axis_mm2s_sts_tkeep(0) => NLW_axi_datamover_1_m_axis_mm2s_sts_tkeep_UNCONNECTED(0),
+      m_axis_mm2s_sts_tlast => NLW_axi_datamover_1_m_axis_mm2s_sts_tlast_UNCONNECTED,
       m_axis_mm2s_sts_tready => '1',
-      m_axis_mm2s_sts_tvalid => NLW_axi_datamover_0_m_axis_mm2s_sts_tvalid_UNCONNECTED,
-      m_axis_mm2s_tdata(31 downto 0) => axi_datamover_0_m_axis_mm2s_tdata(31 downto 0),
-      m_axis_mm2s_tkeep(3 downto 0) => NLW_axi_datamover_0_m_axis_mm2s_tkeep_UNCONNECTED(3 downto 0),
-      m_axis_mm2s_tlast => NLW_axi_datamover_0_m_axis_mm2s_tlast_UNCONNECTED,
-      m_axis_mm2s_tready => xlconstant_0_dout(0),
-      m_axis_mm2s_tvalid => axi_datamover_0_m_axis_mm2s_tvalid,
+      m_axis_mm2s_sts_tvalid => NLW_axi_datamover_1_m_axis_mm2s_sts_tvalid_UNCONNECTED,
+      m_axis_mm2s_tdata(31 downto 0) => axi_datamover_1_m_axis_mm2s_tdata(31 downto 0),
+      m_axis_mm2s_tkeep(3 downto 0) => NLW_axi_datamover_1_m_axis_mm2s_tkeep_UNCONNECTED(3 downto 0),
+      m_axis_mm2s_tlast => NLW_axi_datamover_1_m_axis_mm2s_tlast_UNCONNECTED,
+      m_axis_mm2s_tready => axis_data_fifo_0_s_axis_tready,
+      m_axis_mm2s_tvalid => axi_datamover_1_m_axis_mm2s_tvalid,
       mm2s_err => axi_datamover_0_mm2s_err,
       s_axis_mm2s_cmd_tdata(71 downto 0) => WaveformGen_ctrl_0_s_axis_mm2s_cmd_tdata(71 downto 0),
-      s_axis_mm2s_cmd_tready => axi_datamover_0_s_axis_mm2s_cmd_tready,
+      s_axis_mm2s_cmd_tready => axi_datamover_1_s_axis_mm2s_cmd_tready,
       s_axis_mm2s_cmd_tvalid => WaveformGen_ctrl_0_s_axis_mm2s_cmd_tvalid
     );
 axi_gpio_0: component design_1_axi_gpio_0_0
@@ -2829,33 +2854,45 @@ axi_smc: component design_1_axi_smc_0
       M00_AXI_rready => axi_smc_M00_AXI_RREADY,
       M00_AXI_rresp(1 downto 0) => axi_smc_M00_AXI_RRESP(1 downto 0),
       M00_AXI_rvalid => axi_smc_M00_AXI_RVALID,
-      S00_AXI_araddr(31 downto 0) => axi_datamover_0_M_AXI_MM2S_ARADDR(31 downto 0),
-      S00_AXI_arburst(1 downto 0) => axi_datamover_0_M_AXI_MM2S_ARBURST(1 downto 0),
-      S00_AXI_arcache(3 downto 0) => axi_datamover_0_M_AXI_MM2S_ARCACHE(3 downto 0),
-      S00_AXI_arid(3 downto 0) => axi_datamover_0_M_AXI_MM2S_ARID(3 downto 0),
-      S00_AXI_arlen(7 downto 0) => axi_datamover_0_M_AXI_MM2S_ARLEN(7 downto 0),
+      S00_AXI_araddr(31 downto 0) => axi_datamover_1_M_AXI_MM2S_ARADDR(31 downto 0),
+      S00_AXI_arburst(1 downto 0) => axi_datamover_1_M_AXI_MM2S_ARBURST(1 downto 0),
+      S00_AXI_arcache(3 downto 0) => axi_datamover_1_M_AXI_MM2S_ARCACHE(3 downto 0),
+      S00_AXI_arid(3 downto 0) => axi_datamover_1_M_AXI_MM2S_ARID(3 downto 0),
+      S00_AXI_arlen(7 downto 0) => axi_datamover_1_M_AXI_MM2S_ARLEN(7 downto 0),
       S00_AXI_arlock(0) => '0',
-      S00_AXI_arprot(2 downto 0) => axi_datamover_0_M_AXI_MM2S_ARPROT(2 downto 0),
+      S00_AXI_arprot(2 downto 0) => axi_datamover_1_M_AXI_MM2S_ARPROT(2 downto 0),
       S00_AXI_arqos(3 downto 0) => B"0000",
-      S00_AXI_arready => axi_datamover_0_M_AXI_MM2S_ARREADY,
-      S00_AXI_arsize(2 downto 0) => axi_datamover_0_M_AXI_MM2S_ARSIZE(2 downto 0),
-      S00_AXI_aruser(3 downto 0) => axi_datamover_0_M_AXI_MM2S_ARUSER(3 downto 0),
-      S00_AXI_arvalid => axi_datamover_0_M_AXI_MM2S_ARVALID,
-      S00_AXI_rdata(63 downto 0) => axi_datamover_0_M_AXI_MM2S_RDATA(63 downto 0),
+      S00_AXI_arready => axi_datamover_1_M_AXI_MM2S_ARREADY,
+      S00_AXI_arsize(2 downto 0) => axi_datamover_1_M_AXI_MM2S_ARSIZE(2 downto 0),
+      S00_AXI_aruser(3 downto 0) => axi_datamover_1_M_AXI_MM2S_ARUSER(3 downto 0),
+      S00_AXI_arvalid => axi_datamover_1_M_AXI_MM2S_ARVALID,
+      S00_AXI_rdata(63 downto 0) => axi_datamover_1_M_AXI_MM2S_RDATA(63 downto 0),
       S00_AXI_rid(3 downto 0) => NLW_axi_smc_S00_AXI_rid_UNCONNECTED(3 downto 0),
-      S00_AXI_rlast => axi_datamover_0_M_AXI_MM2S_RLAST,
-      S00_AXI_rready => axi_datamover_0_M_AXI_MM2S_RREADY,
-      S00_AXI_rresp(1 downto 0) => axi_datamover_0_M_AXI_MM2S_RRESP(1 downto 0),
-      S00_AXI_rvalid => axi_datamover_0_M_AXI_MM2S_RVALID,
-      aclk => processing_system7_0_FCLK_CLK0,
+      S00_AXI_rlast => axi_datamover_1_M_AXI_MM2S_RLAST,
+      S00_AXI_rready => axi_datamover_1_M_AXI_MM2S_RREADY,
+      S00_AXI_rresp(1 downto 0) => axi_datamover_1_M_AXI_MM2S_RRESP(1 downto 0),
+      S00_AXI_rvalid => axi_datamover_1_M_AXI_MM2S_RVALID,
+      aclk => Net1,
       aresetn => rst_ps7_0_50M_peripheral_aresetn(0)
+    );
+axis_data_fifo_0: component design_1_axis_data_fifo_0_0
+     port map (
+      m_axis_aclk => processing_system7_0_FCLK_CLK0,
+      m_axis_tdata(31 downto 0) => axi_datamover_0_m_axis_mm2s_tdata(31 downto 0),
+      m_axis_tready => xlconstant_0_dout(0),
+      m_axis_tvalid => axi_datamover_0_m_axis_mm2s_tvalid,
+      s_axis_aclk => Net1,
+      s_axis_aresetn => rst_ps7_0_50M_peripheral_aresetn(0),
+      s_axis_tdata(31 downto 0) => axi_datamover_1_m_axis_mm2s_tdata(31 downto 0),
+      s_axis_tready => axis_data_fifo_0_s_axis_tready,
+      s_axis_tvalid => axi_datamover_1_m_axis_mm2s_tvalid
     );
 clk_wiz_0: component design_1_clk_wiz_0_0
      port map (
       clk_in1_n => adc_clk_n_i_1,
       clk_in1_p => adc_clk_p_i_1,
       clk_out1 => processing_system7_0_FCLK_CLK0,
-      clk_out2 => NLW_clk_wiz_0_clk_out2_UNCONNECTED,
+      clk_out2 => Net1,
       clk_out3 => clk_wiz_0_clk_out3,
       locked => clk_wiz_0_locked
     );
@@ -2960,7 +2997,7 @@ processing_system7_0: component design_1_processing_system7_0_0
       SPI0_SS_I => '0',
       SPI0_SS_O => NLW_processing_system7_0_SPI0_SS_O_UNCONNECTED,
       SPI0_SS_T => NLW_processing_system7_0_SPI0_SS_T_UNCONNECTED,
-      S_AXI_HP0_ACLK => processing_system7_0_FCLK_CLK0,
+      S_AXI_HP0_ACLK => Net1,
       S_AXI_HP0_ARADDR(31 downto 0) => axi_smc_M00_AXI_ARADDR(31 downto 0),
       S_AXI_HP0_ARBURST(1 downto 0) => axi_smc_M00_AXI_ARBURST(1 downto 0),
       S_AXI_HP0_ARCACHE(3 downto 0) => axi_smc_M00_AXI_ARCACHE(3 downto 0),
@@ -3162,6 +3199,13 @@ rst_ps7_0_50M: component design_1_rst_ps7_0_50M_0
       peripheral_reset(0) => NLW_rst_ps7_0_50M_peripheral_reset_UNCONNECTED(0),
       slowest_sync_clk => processing_system7_0_FCLK_CLK0
     );
+tvalid_trigger_0: component design_1_tvalid_trigger_0_0
+     port map (
+      clk => processing_system7_0_FCLK_CLK0,
+      output_latch => tvalid_trigger_0_output,
+      resetn => WaveformGen_ctrl_0_s_axis_mm2s_cmd_tvalid,
+      sig => axi_datamover_0_m_axis_mm2s_tvalid
+    );
 xadc_wiz_0: component design_1_xadc_wiz_0_0
      port map (
       alarm_out => NLW_xadc_wiz_0_alarm_out_UNCONNECTED,
@@ -3215,7 +3259,7 @@ xlconcat_0: component design_1_xlconcat_0_0
       In3(0) => xlconstant_1_dout(0),
       In4(0) => xlconstant_1_dout(0),
       In5(0) => xlconstant_1_dout(0),
-      In6(0) => xlconstant_1_dout(0),
+      In6(0) => tvalid_trigger_0_output,
       In7(0) => axi_datamover_0_mm2s_err,
       dout(7 downto 0) => xlconcat_0_dout(7 downto 0)
     );

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1591922197">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1592275021">
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
@@ -30,6 +30,12 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/WaveformGen_ctrl.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/tvalid_trigger.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -122,17 +128,16 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="design_1_DACs_wrapper_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xadc_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps7_0_50M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_datamover_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_smc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_datamover_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_ADCs_wrapper_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_WaveformGen_ctrl_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_2_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_WaveformGen_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ADCs_wrapper_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_c_counter_binary_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_tvalid_trigger_0_0"/>
 </GenRun>

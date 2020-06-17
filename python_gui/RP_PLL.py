@@ -215,11 +215,11 @@ class RP_PLL_device():
 
     def write_Zynq_ddr(self, address_offset, data):
         # send header
-        packet_to_send = struct.pack('=III', self.MAGIC_BYTES_WRITE_DDR, 0, 2*len(data)) #2 bytes per points
+        packet_to_send = struct.pack('=III', self.MAGIC_BYTES_WRITE_DDR, address_offset, len(data)) #2 bytes per points
         self.sock.sendall(packet_to_send)
         
         # send data
-        self.sock.sendall(data.tobytes())
+        self.sock.sendall(data)
 
     def write_file_to_ddr(self):
         packet_to_send = struct.pack('=III', self.MAGIC_BYTES_WRITE_FILE_DDR, 0, 0)
