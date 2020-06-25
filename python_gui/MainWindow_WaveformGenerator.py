@@ -12,7 +12,7 @@ from initialConfiguration_RP_2 import initialConfiguration
 
 import RP_PLL
 
-from WaveformGenerator import WaveformGenerator
+from WaveformGeneratorGUI import WaveformGenerator
 
 
 class controller(object):
