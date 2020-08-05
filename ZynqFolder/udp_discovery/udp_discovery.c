@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 
     //char sendBuf[SEND_BUF_SIZE];
     char recvBuf[RECV_BUF_SIZE];
-
+    
     // First: read our mac address (we send this in the response packet as a form of serial-number identification)
     FILE* f_mac = fopen("/sys/class/net/eth0/address", "r");
     char mac_address[MAC_BUF_SIZE];

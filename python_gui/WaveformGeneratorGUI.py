@@ -16,6 +16,8 @@ from catch_exception import *
 class WaveformGenerator(QtWidgets.QMainWindow):
 	fs = 125e6
 
+	DATA_ADDR = 0x1e00_0000
+	DMA_START_ADDR = 0x0800_0000
 
 	# MAXPOINTS   = int((0x1FFFFFFF-0x1E000000+0)/2) # Warning, if I put the '+1', there is an error : maybe a signal that wrap to 0 in the FPGA
 	MAXPOINTS = 2**23/2 # maximum number of bytes for a single cmd in DataMover Xilinx's IP (/2 because 2 bytes per data point)
@@ -145,7 +147,7 @@ class WaveformGenerator(QtWidgets.QMainWindow):
 			self.sendNumberOfPoints()
 
 			# send file to ddr3
-			self.dev.write_Zynq_ddr(0, data_in_bin)
+			self.dev.write_Zynq_ddr(self.DATA_ADDR-self.DMA_START_ADDR, data_in_bin)
 		except Exception as e:
 			print(e)
 		

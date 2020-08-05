@@ -144,6 +144,14 @@ typedef struct binary_packet_reboot_monitor_t {
 } binary_packet_reboot_monitor_t;
 
 
+uint32_t magic_bytes_read_buffer2 = 0xABCD1240;
+typedef struct binary_packet_read_buffer2_t {
+	uint32_t magic_bytes;	// 0xABCD1235
+	uint32_t start_address;
+	uint32_t number_of_points;	
+} binary_packet_read_buffer2_t;
+
+
 
 #pragma pack(pop)
 
@@ -272,6 +280,7 @@ void write_value(unsigned long a_addr, int a_type, unsigned long a_value) {
 #define LOGGER_BUFFER_SIZE (1UL<<15)
 #define LOGGER_BASE_ADDR 0x00100000UL
 #define LOGGER_DATA_OFFSET  (1UL<<19)
+#define LOGGER_DATA_OFFSET2  (7UL<<19)
 #define LOGGER_START_WRITE_OFFSET  0x1004UL
 
 int16_t data_buffer[LOGGER_BUFFER_SIZE];
@@ -307,6 +316,21 @@ void acq_GetDataFromLogger(uint32_t* size, int16_t* buffer_in)
     }
     if (bVerbose)
     	printf("buffer_in[0] = %hd\n", buffer_in[0]);
+}
+
+void acq_GetDataFromLogger2(uint32_t* size, int16_t* buffer_in)
+{
+    *size = MIN(*size, LOGGER_BUFFER_SIZE);
+
+    const volatile uint32_t* raw_buffer = (uint32_t*)((char*)map_base + LOGGER_BASE_ADDR + LOGGER_DATA_OFFSET2);
+    //const volatile uint32_t* raw_buffer = (uint32_t*)((char*)map_base + OSC_BASE_ADDR + OSC_CHB_OFFSET);
+
+    printf("acq_GetDataFromLogger2: reading %u points, starting from address 0x%lX\n", *size, LOGGER_BASE_ADDR + LOGGER_DATA_OFFSET2);
+
+    for (uint32_t i = 0; i < (*size); ++i) {
+        buffer_in[i] = (raw_buffer[i % LOGGER_BUFFER_SIZE]);
+    }
+    printf("buffer_in[0] = %hd\n", buffer_in[0]);
 }
 
 
@@ -974,6 +998,73 @@ static int handleConnection(int connfd) {
 	        		}
 
 	        	
+	        	} else if (message_magic_bytes == magic_bytes_read_buffer2) {
+
+	        		iRequiredBytes = sizeof(binary_packet_read_buffer2_t);
+	        		if (msg_end >= iRequiredBytes) {
+		        		
+		        		struct binary_packet_read_buffer2_t * pPacketReadBuffer;
+		        		pPacketReadBuffer = (binary_packet_read_buffer2_t*) message_buff;
+
+
+
+		        		if (bVerbose)
+		        			printf("Received a buffer read packet.\n");
+		        		if (bVerbose)
+		        			printf("pPacketReadBuffer->start_address = 0x%X (hex) (currently unused)\n", pPacketReadBuffer->start_address);
+		        		if (bVerbose)
+		        			printf("pPacketReadBuffer->number_of_points = %u (decimal)\n", pPacketReadBuffer->number_of_points);
+
+		        		// do an acquisition
+		        		if (bVerbose)// 
+		        			printf("running acquisition...\n");
+					    struct timespec time_start, time_end;
+					    // clock_gettime(CLOCK_REALTIME, &time_start);
+					    // stuff to be timed would go here
+
+		        		//acq_MinimumSetup();
+		        		//acq_LoggerStartWrite();
+					    // clock_gettime(CLOCK_REALTIME, &time_end);
+					    if (bVerbose)// 
+					    	printf("acq_MinimumSetup(), elapsed = %d seconds + %ld ms\n", (int)(time_end.tv_sec-time_start.tv_sec), (long int)(time_end.tv_nsec-time_start.tv_nsec)/1000000);
+
+		        		// this should contain the actual data, note that the writing has surely wrapped and the start/end of the data run will be random in the dataset
+		        		// TODO: sync with the end of the acquisition in the buffer.
+		        		clock_gettime(CLOCK_REALTIME, &time_start);
+		        		uint32_t acq_size = MIN(LOGGER_BUFFER_SIZE, pPacketReadBuffer->number_of_points);
+		        		if (bVerbose)// 
+		        			printf("acquisition completed, grabbing %u points from 2nd buffer....\n", acq_size);
+		        		//acq_GetDataRawV2_CHA(0, &acq_size, data_buffer);
+		        		acq_GetDataFromLogger2(&acq_size, data_buffer);
+					    clock_gettime(CLOCK_REALTIME, &time_end);
+					    if (bVerbose)
+					    	printf("getdata elapsed = %d seconds + %ld ns\n", (int)(time_end.tv_sec-time_start.tv_sec), (long int)(time_end.tv_nsec-time_start.tv_nsec));
+		        		// for (int k=100; k<140; k++)
+
+		        		// dump this into the TCP socket:
+		        		if (bVerbose)// 
+		        			printf("before socket send()\n");
+		        		clock_gettime(CLOCK_REALTIME, &time_start);
+		        		send(connfd, data_buffer, (size_t)acq_size*sizeof(int16_t), 0);
+					    clock_gettime(CLOCK_REALTIME, &time_end);
+					    if (bVerbose)
+					    	printf("send() elapsed = %d seconds + %ld ns\n", (int)(time_end.tv_sec-time_start.tv_sec), (long int)(time_end.tv_nsec-time_start.tv_nsec));
+		        		if (bVerbose)
+		        			printf("socket send() complete\n");
+
+
+		        		// reset our message parsing state variables
+		        		bytes_consumed = sizeof(binary_packet_read_buffer2_t);
+		        		bHaveMagicBytes = false;
+		        		iRequiredBytes = sizeof(message_magic_bytes);
+	        		} else {
+	        			if (bVerbose)
+	        				printf("Received a buffer read packet, but we have not received the full packet yet.\n");
+
+	        		}
+
+	        	////////////////////////////////////////////////////////////
+	        	// Run a software control loop (integrator only) to lock a laser on the flank of an absorption line
 	        	} else if (message_magic_bytes == magic_bytes_read_ddr)
         			{
 		        		iRequiredBytes = sizeof(binary_packet_read_ddr_t);
