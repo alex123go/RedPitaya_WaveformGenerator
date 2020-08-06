@@ -9,7 +9,7 @@
     <Object name="xc7z010_1" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/debug_nets.ltx"/>
       <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/debug_nets.ltx"/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/WaveformGen.bit"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/design_1_wrapper.bit"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>

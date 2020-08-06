@@ -16,6 +16,9 @@ from catch_exception import *
 class WaveformGenerator(QtWidgets.QMainWindow):
 	fs = 125e6
 
+	DATA_ADDR = 0x1e00_0000
+	DMA_START_ADDR = 0x0800_0000
+
 
 	# MAXPOINTS   = int((0x1FFFFFFF-0x1E000000+0)/2) # Warning, if I put the '+1', there is an error : maybe a signal that wrap to 0 in the FPGA
 	MAXPOINTS = 2**23/2 # maximum number of bytes for a single cmd in DataMover Xilinx's IP (/2 because 2 bytes per data point)
@@ -113,23 +116,25 @@ class WaveformGenerator(QtWidgets.QMainWindow):
 
 	def sendWave(self):
 		try:
-			self.dev.write_file_on_remote(strFilenameLocal=self.lineEdit_file.text(), strFilenameRemote='/opt/data.dat')
-		except OSError as e:
+			try:
+				file = self.lineEdit_file.text()
+				with open(file,'rb') as fb:
+					data_in_bin = fb.read()
+			except OSError as e:
+				print(e)
+
+			sizeInBytes = len(data_in_bin)
+			self.nptsInFile = int(sizeInBytes/2)
+
+			# write n_pts to lineEdit + send to FPGA
+			self.lineEdit_nPts.blockSignals(True)
+			self.lineEdit_nPts.setText(str(int(sizeInBytes/2)))
+			self.lineEdit_nPts.blockSignals(False)
+
+			self.sendNumberOfPoints()
+
+			# send file to ddr3
+			self.dev.write_Zynq_ddr(self.DATA_ADDR-self.DMA_START_ADDR, data_in_bin)
+		except Exception as e:
 			print(e)
-		self.loadWave()
-
-	def loadWave(self):
-		# find file size
-		sizeInBytes = os.path.getsize(self.lineEdit_file.text())
-		self.nptsInFile = int(sizeInBytes/2)
-
-		# write n_pts to lineEdit + send to FPGA
-		self.lineEdit_nPts.blockSignals(True)
-		self.lineEdit_nPts.setText(str(int(sizeInBytes/2)))
-		self.lineEdit_nPts.blockSignals(False)
-
-		self.sendNumberOfPoints()
-
-		# load file in
-		self.dev.write_file_to_ddr()
 		
