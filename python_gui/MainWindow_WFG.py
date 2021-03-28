@@ -46,8 +46,8 @@ class controller(object):
 							
 		strFPGAFirmware=r'WaveformGen_1DAC.bit'
 		strCPUFirmware=u'../ZynqFolder/monitor-tcp/monitor-tcp_384MB_Alpine'
-		
-		self.initial_config = initialConfiguration(self.dev, devices_data=devices_data, strFPGAFirmware=strFPGAFirmware, strCPUFirmware=strCPUFirmware)
+		strBroadcastAddress = "192.168.2.255"
+		self.initial_config = initialConfiguration(self.dev, devices_data=devices_data, strBroadcastAddress=strBroadcastAddress, strFPGAFirmware=strFPGAFirmware, strCPUFirmware=strCPUFirmware)
 
 		# we should pause here because of app.exec_() inside self.initial_config, but it doesn't
 		# reset preferences to default in spyder 3.6 solved the problem

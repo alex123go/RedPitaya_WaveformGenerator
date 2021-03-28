@@ -21,7 +21,7 @@
     <Object name="design_1_i/ila_0" gui_info="">
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
       <Properties Property="CONTROL.TRIGGER_MODE" value="BASIC_ONLY"/>
-      <Properties Property="CONTROL.TRIGGER_POSITION" value="20"/>
+      <Properties Property="CONTROL.TRIGGER_POSITION" value="2000"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="design_1_i/ila_1" gui_info="">
@@ -41,7 +41,7 @@
   <ObjectList object_type="hw_probe" gui_info="">
     <Object name="design_1_i/axi_datamover_0_m_axis_mm2s_sts_tdata[7:0]" gui_info="hw_vios/hw_vio_1=0"/>
     <Object name="design_1_i/axi_datamover_0_m_axis_mm2s_sts_tvalid" gui_info="Trigger Setup=0"/>
-    <Object name="design_1_i/axi_datamover_0_m_axis_mm2s_tvalid" gui_info="Trigger Setup=0"/>
+    <Object name="design_1_i/axi_datamover_0_m_axis_mm2s_tvalid" gui_info=""/>
     <Object name="design_1_i/axi_datamover_0_m_axis_s2mm_sts_tdata[7:0]" gui_info="hw_vios/hw_vio_1=1"/>
     <Object name="design_1_i/axi_datamover_0_s_axis_s2mm_tready" gui_info="Trigger Setup=0"/>
     <Object name="design_1_i/axi_gpio_1_gpio_io_o" gui_info=""/>
@@ -75,6 +75,7 @@
     <Object name="design_1_i/vio_0_probe_out8" gui_info="hw_vios/hw_vio_1=8"/>
     <Object name="design_1_i/vio_0_probe_out8[15:0]" gui_info="hw_vios/hw_vio_1=7"/>
     <Object name="design_1_i/vio_0_probe_out8_1" gui_info="Trigger Setup=0"/>
+    <Object name="design_1_i/xlslice_0_Dout[13:0]" gui_info="Trigger Setup=0"/>
   </ObjectList>
   <ObjectList object_type="hw_sysmon" gui_info="">
     <Object name="XADC" gui_info="dashboard_1=[TEMPERATURE=-65281;SCAN_RATE=1000;TRACK_TIME=1;],dashboard_2=[SCAN_RATE=1000;TRACK_TIME=1;]"/>
@@ -2926,7 +2927,7 @@
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b0"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
@@ -2937,7 +2938,7 @@
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b0"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
       </probeOptions>
       <nets>
@@ -7835,7 +7836,7 @@
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq14&apos;hXXXX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq14&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq14&apos;s100"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="SIGNED"/>
@@ -7846,7 +7847,7 @@
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq14&apos;hXXXX"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq14&apos;s100"/>
         <Option Id="WAVEFORM_STYLE" value="Analog"/>
       </probeOptions>
       <nets>

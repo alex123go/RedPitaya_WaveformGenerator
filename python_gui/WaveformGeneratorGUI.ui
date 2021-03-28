@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>484</width>
-    <height>99</height>
+    <height>124</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -34,7 +34,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_nPts">
+        <widget class="user_friendly_QLineEdit" name="lineEdit_nPts">
          <property name="toolTip">
           <string>write &quot;max&quot; to set to maximum number of points</string>
          </property>
@@ -84,7 +84,7 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QLineEdit" name="lineEdit_file">
+        <widget class="lineEditWithDragAndDrop" name="lineEdit_file">
          <property name="minimumSize">
           <size>
            <width>100</width>
@@ -136,6 +136,18 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>lineEditWithDragAndDrop</class>
+   <extends>QLineEdit</extends>
+   <header>customWidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>user_friendly_QLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>customWidgets</header>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>lineEdit_nPts</tabstop>
   <tabstop>pushButton_start</tabstop>

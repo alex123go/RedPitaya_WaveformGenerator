@@ -49,13 +49,8 @@ class WaveformGenerator(QtWidgets.QMainWindow):
 		# 	self.getValues()
 
 
-
-
 	def initUI(self):
-
-		self.lineEdit_nPts_userFriendly = set_to_user_friendly_QLineEdit(self.lineEdit_nPts)
 		self.lineEdit_nPts.returnPressed.connect(self.sendNumberOfPoints)
-
 		self.pushButton_start.clicked.connect(self.startWFG)
 		self.pushButton_stop.clicked.connect(self.stopWFG)
 		self.pushButton_playOneSeq.clicked.connect(self.playOneSeq)
